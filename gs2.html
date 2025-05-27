@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPSC GS2 - Complete Subject Coverage | UPSC Master</title>
+    <style>
+        /* Universal Box-Sizing */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling - Font, Line Height, Color, Gradient Background with Animation */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            /* Changed gradient to start from green, move to light green, then orange, then red */
+            background: linear-gradient(-45deg, #4CAF50, #8BC34A, #FF9800, #F44336); 
+            background-size: 400% 400%;
+            animation: gradientShift 20s ease infinite;
+            min-height: 100vh;
+        }
+
+        /* Keyframe Animation for Background Gradient */
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Container for Centering Content */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header Styling */
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        /* Breadcrumb Styling */
+        .breadcrumb {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 12px 20px;
+            border-radius: 25px;
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .breadcrumb:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.05);
+        }
+
+        /* Section Title Styling */
+        .section-title {
+            color: white;
+            font-size: 2.2rem;
+            text-align: center;
+            margin: 50px 0 30px 0;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 120px;
+            height: 4px;
+            background: linear-gradient(90deg, #ffd700, #ffed4e);
+            margin: 15px auto;
+            border-radius: 2px;
+        }
+
+        /* Cards Grid Layout */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        /* Individual Card Styling */
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 35px 30px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            transition: all 0.4s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+        }
+
+        /* Card Hover Shine Effect */
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            transition: left 0.6s;
+        }
+
+        .card:hover::before {
+            left: 100%;
+        }
+
+        /* Card Hover Transform */
+        .card:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+        }
+
+        /* Card Icon Styling */
+        .card-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            text-align: center;
+            filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.1));
+        }
+
+        /* Card Heading Styling */
+        .card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #2c3e50;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        /* Card Paragraph Styling */
+        .card p {
+            color: #666;
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+        }
+
+        /* Card Topics List Styling */
+        .card-topics {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 25px;
+        }
+
+        .card-topics li {
+            padding: 8px 0;
+            color: #555;
+            position: relative;
+            padding-left: 25px;
+            font-size: 1rem;
+        }
+
+        .card-topics li::before {
+            content: '📚'; /* Book icon */
+            position: absolute;
+            left: 0;
+            font-size: 1.2rem;
+        }
+
+        /* Card Subtopics Section Styling */
+        .card-subtopics {
+            background: rgba(52, 152, 219, 0.1);
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 15px;
+        }
+
+        .card-subtopics h4 {
+            color: #3498db;
+            font-size: 1rem;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        /* Subtopic List Styling */
+        .subtopic-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .subtopic-list li {
+            padding: 3px 0;
+            color: #666;
+            font-size: 0.9rem;
+            position: relative;
+            padding-left: 15px;
+        }
+
+        .subtopic-list li::before {
+            content: '•'; /* Bullet point */
+            position: absolute;
+            left: 0;
+            color: #3498db;
+            font-weight: bold;
+        }
+
+        /* Card Button Styling */
+        .card-button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #4CAF50, #8BC34A); /* Adjusted button gradient for GS2 */
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            border: none;
+            font-size: 1.1rem;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .card-button:hover {
+            background: linear-gradient(135deg, #8BC34A, #FF5722); /* Adjusted button hover gradient for GS2 */
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(139, 195, 74, 0.4);
+        }
+
+        /* Specific Card Border Colors for GS2 Subjects */
+        .constitution-card {
+            border-left: 6px solid #2196F3; /* Blue */
+        }
+
+        .governance-card {
+            border-left: 6px solid #FF5722; /* Deep Orange */
+        }
+
+        .social-justice-card {
+            border-left: 6px solid #E91E63; /* Pink */
+        }
+
+        .ir-card {
+            border-left: 6px solid #673AB7; /* Deep Purple */
+        }
+
+        /* Stats Section Styling */
+        .stats-section {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 50px 0;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .stat-item {
+            color: white;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #ffd700; /* Gold color for numbers */
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .stat-label {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+
+        /* Footer Styling */
+        .footer {
+            text-align: center;
+            color: white;
+            margin-top: 50px;
+            padding: 30px;
+            background: rgba(0,0,0,0.2);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .cards-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .card {
+                padding: 25px 20px;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+
+        /* Notification Styling */
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #27ae60, #2ecc71);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 10px;
+            display: none;
+            z-index: 1000;
+            animation: slideIn 0.4s ease;
+            box-shadow: 0 5px 15px rgba(39, 174, 96, 0.3);
+        }
+
+        /* Notification Slide-in Animation */
+        @keyframes slideIn {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        /* Progress Indicator Styling */
+        .progress-indicator {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 30px 0;
+            text-align: center;
+            color: white;
+        }
+
+        .progress-bar {
+            background: rgba(255, 255, 255, 0.3);
+            height: 8px;
+            border-radius: 4px;
+            margin: 15px 0;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            background: linear-gradient(90deg, #ffd700, #ffed4e);
+            height: 100%;
+            width: 0%;
+            border-radius: 4px;
+            animation: fillProgress 3s ease-in-out; /* Initial animation on load */
+        }
+
+        /* Progress Fill Animation */
+        @keyframes fillProgress {
+            to { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <a href="#" class="breadcrumb" onclick="showNotification('Returning to Main Page')">🏠 UPSC Master Home</a>
+            <h1>⚖️ General Studies Paper 2</h1>
+            <p>Comprehensive Coverage of Constitution, Governance, Social Justice & International Relations</p>
+            
+            <div class="progress-indicator">
+                <h3>Your GS2 Learning Progress</h3>
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+                <p>Complete all modules to master GS2 syllabus</p>
+            </div>
+        </header>
+
+        <section class="stats-section">
+            <h2 style="color: white; margin-bottom: 20px;">📊 GS2 at a Glance</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">4</div>
+                    <div class="stat-label">Major Subjects</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">150+</div>
+                    <div class="stat-label">Key Topics</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">400+</div>
+                    <div class="stat-label">Practice Questions</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100</div>
+                    <div class="stat-label">Marks Weightage</div>
+                </div>
+            </div>
+        </section>
+
+        <h2 class="section-title">📜 Indian Constitution</h2>
+        <div class="cards-grid">
+            <div class="card constitution-card" onclick="showNotification('Constitutional Framework')">
+                <div class="card-icon">🏛️</div>
+                <h3>Constitutional Framework</h3>
+                <p>Evolution, features, amendments, and basic structure</p>
+                <ul class="card-topics">
+                    <li>Preamble & Union and its Territory</li>
+                    <li>Citizenship & Fundamental Rights</li>
+                    <li>Directive Principles of State Policy</li>
+                    <li>Fundamental Duties & Amendments</li>
+                </ul>
+                <div class="card-subtopics">
+                    <h4>Key Focus Areas</h4>
+                    <ul class="subtopic-list">
+                        <li>Historical Underpinnings</li>
+                        <li>Salient Features</li>
+                        <li>Basic Structure Doctrine</li>
+                        <li>Significant Amendments</li>
+                    </ul>
+                </div>
+                <button class="card-button">Start Constitution</button>
+            </div>
+
+            <div class="card constitution-card" onclick="showNotification('Union & State Organs')">
+                <div class="card-icon">👨‍⚖️</div>
+                <h3>Union & State Organs</h3>
+                <p>Structure, functions, and responsibilities</p>
+                <ul class="card-topics">
+                    <li>President, Vice-President, PM & Council of Ministers</li>
+                    <li>Parliament: Structure, Functioning, Conduct of Business</li>
+                    <li>Supreme Court & High Courts</li>
+                    <li>State Executive & Legislature</li>
+                </ul>
+                <div class="card-subtopics">
+                    <h4>Important Aspects</h4>
+                    <ul class="subtopic-list">
+                        <li>Powers & Functions of Executive</li>
+                        <li>Legislative Procedures & Privileges</li>
+                        <li>Judicial Review & Activism</li>
+                        <li>Centre-State Relations</li>
+                    </ul>
+                </div>
+                <button class="card-button">Explore Governance</button>
+            </div>
+        </div>
+
+        <h2 class="section-title">🤝 Governance</h2>
+        <div class="cards-grid">
+            <div class="card governance-card" onclick="showNotification('Aspects of Governance')">
+                <div class="card-icon">📊</div>
+                <h3>Aspects of Governance</h3>
+                <p>Transparency, accountability, and citizen-centric administration</p>
+                <ul class="card-topics">
+                    <li>Role of Civil Services in a Democracy</li>
+                    <li>Transparency & Accountability</li>
+                    <li>E-Governance: Applications, Models, Successes</li>
+                    <li>Citizen Charters & Redressal Mechanisms</li>
+                </ul>
+                <div class="card-subtopics">
+                    <h4>Core Concepts</h4>
+                    <ul class="subtopic-list">
+                        <li>Good Governance Initiatives</li>
+                        <li>Right to Information Act</li>
+                        <li>Role of NGOs, SHGs</li>
+                        <li>Pressure Groups</li>
+                    </ul>
+                </div>
+                <button class="card-button">Learn Governance</button>
+            </div>
+
+            <div class="card governance-card" onclick="showNotification('Welfare & Development')">
+                <div class="card-icon">🏘️</div>
+                <h3>Welfare & Development</h3>
+                <p>Government policies and interventions for development</p>
+                <ul class="card-topics">
+                    <li>Development Processes & Industry</li>
+                    <li>Role of NGOs, SHGs, various groups</li>
+                    <li>Welfare Schemes for Vulnerable Sections</li>
+                    <li>Issues relating to Development & Management of Social Sector/Services</li>
+                </ul>
+                <div class="card-subtopics">
+                    <h4>Important Areas</h4>
+                    <ul class="subtopic-list">
+                        <li>Health, Education, Human Resources</li>
+                        <li>Poverty & Hunger</li>
+                        <li>Mechanisms, Laws, Institutions & Bodies</li>
+                        <li>Issues relating to Poverty & Development</li>
+                    </ul>
+                </div>
+                <button class="card-button">Explore Welfare</button>
+            </div>
+        </div>
+
+        <h2 class="section-title">✊ Social Justice</h2>
+        <div class="cards-grid">
+            <div class="card social-justice-card" onclick="showNotification('Vulnerable Sections')">
+                <div class="card-icon">🫂</div>
+                <h3>Vulnerable Sections</h3>
+                <p>Policies and issues related to marginalized groups</p>
+                <ul class="card-topics">
+                    <li>Issues relating to Poverty & Hunger</li>
+                    <li>Mechanisms, Laws, Institutions & Bodies for Protection</li>
+                    <li>Welfare Schemes for Vulnerable Sections</li>
+                    <li>Role of Government & NGOs</li>
+                </ul>
+                <div class="card-subtopics">
+                    <h4>Key Issues</h4>
+                    <ul class="subtopic-list">
+                        <li>Women & Children Issues</li>
+                        <li>SC/ST/OBC Rights</li>
+                        <li>Elderly & Disabled</li>
+                        <li>Minorities</li>
+                    </ul>
+                </div>
+                <button class="card-button">Study Social Justice</button>
+            </div>
+
+            <div class="card social-justice-card" onclick="showNotification('Health & Education')">
+                <div class="card-icon">🏥</div>
+                <h3>Health & Education</h3>
+                <p>Development and management of social sector services</p>
+                <ul class="card-topics">
+                    <li>Issues relating to Development & Management of Social Sector/Services</li>
+                    <li>Health Sector: Policies, Challenges, Initiatives</li>
+                    <li>Education Sector: Policies, Challenges, Initiatives</li>
+                    <li>Human Resources & Skill Development</li>
+                </ul>
+                <div class="card-subtopics">
+                    <h4>Focus Areas</h4>
+                    <ul class="subtopic-list">
+                        <li>National Health Policy</li>
+                        <li>Right to Education</li>
+                        <li>Skill India Mission</li>
+                        <li>Public Health Infrastructure</li>
+                    </ul>
+                </div>
+                <button class="card-button">Explore Social Services</button>
+            </div>
+        </div>
+
+        <h2 class="section-title">🌐 International Relations</h2>
+        <div class="cards-grid">
+            <div class="card ir-card" onclick="showNotification('India & Global Affairs')">
+                <div class="card-icon">🌍</div>
+                <h3>India & Global Affairs</h3>
+                <p>India's foreign policy and international engagements</p>
+                <ul class="card-topics">
+                    <li>India and its Neighborhood- Relations</li>
+                    <li>Bilateral, Regional and Global Groupings</li>
+                    <li>Important International Institutions, Agencies</li>
+                    <li>Effect of Policies & Politics of Developed & Developing Countries</li>
+                </ul>
+                <div class="card-subtopics">
+                    <h4>Critical Areas</h4>
+                    <ul class="subtopic-list">
+                        <li>UN, WTO, IMF, World Bank</li>
+                        <li>BRICS, SCO, ASEAN</li>
+                        <li>India-US, India-China, India-Russia Relations</li>
+                        <li>Diaspora & Foreign Policy</li>
+                    </ul>
+                </div>
+                <button class="card-button">Learn IR</button>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <h3>🎯 Master GS2 with Confidence!</h3>
+            <p>Comprehensive coverage of all GS2 topics with expert guidance and practice materials</p>
+            <button class="card-button" style="max-width: 400px; margin: 20px auto;" onclick="showNotification('Starting comprehensive GS2 preparation!')">Begin Complete GS2 Course</button>
+        </footer>
+    </div>
+
+    <div class="notification" id="notification"></div>
+
+    <script>
+        // Function to display a temporary notification
+        function showNotification(subject) {
+            const notification = document.getElementById('notification');
+            notification.textContent = `🚀 ${subject} - Ready to begin your learning journey!`;
+            notification.style.display = 'block';
+            
+            // Hide notification after 4 seconds
+            setTimeout(() => {
+                notification.style.display = 'none';
+            }, 4000);
+        }
+
+        // Enhanced card interactions (hover effects)
+        document.querySelectorAll('.card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-15px) scale(1.02)';
+                this.style.boxShadow = '0 25px 50px rgba(0,0,0,0.3)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+                this.style.boxShadow = '0 15px 35px rgba(0,0,0,0.2)';
+            });
+        });
+
+        // Intersection Observer for staggered card animations on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    // Apply animation with a delay based on index
+                    setTimeout(() => {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }, index * 100); // Staggered delay
+                }
+            });
+        }, {
+            threshold: 0.1 // Trigger when 10% of the element is visible
+        });
+
+        // Initialize cards for animation: set initial state and observe
+        document.querySelectorAll('.card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+            observer.observe(card);
+        });
+
+        // Progress tracking simulation
+        let completedModules = 0;
+        document.querySelectorAll('.card-button').forEach(button => {
+            button.addEventListener('click', function() {
+                completedModules++;
+                const progressFill = document.querySelector('.progress-fill');
+                // Calculate total modules dynamically
+                const totalModules = document.querySelectorAll('.card').length;
+                const progressPercentage = (completedModules / totalModules) * 100;
+                
+                // Update progress bar width, ensuring it doesn't exceed 100%
+                progressFill.style.width = `${Math.min(progressPercentage, 100)}%`;
+                
+                // Show completion notification if all modules are done
+                if (completedModules === totalModules) {
+                    showNotification('Congratulations! You have completed all GS2 modules!');
+                }
+            });
+        });
+
+        // Dynamic background color changes based on scroll position
+        window.addEventListener('scroll', () => {
+            // Calculate scroll percentage
+            const scrollPercent = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
+            // Map scroll percentage to a hue value (0-360 degrees)
+            const hue = scrollPercent * 360;
+            // Apply hue rotation filter to the body
+            document.body.style.filter = `hue-rotate(${hue}deg)`;
+        });
+    </script>
+</body>
+</html>
