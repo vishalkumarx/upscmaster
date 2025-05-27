@@ -181,25 +181,32 @@
             font-weight: bold;
         }
 
+        /* IMPORTANT: Adjusting button styles to correctly wrap the <a> tag */
         .card-button {
-            display: block;
+            display: block; /* Make the button a block element */
             width: 100%;
-            padding: 12px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            text-align: center;
-            margin-top: 20px;
-            transition: all 0.3s ease;
-            border: none;
-            font-size: 1rem;
+            padding: 0; /* Remove padding from button itself */
+            background: transparent; /* Make button background transparent */
+            border: none; /* Remove button border */
             cursor: pointer;
+            text-align: center; /* Center content horizontally */
         }
 
-        .card-button:hover {
+        .card-button a {
+            display: block; /* Make the link fill the button area */
+            width: 100%;
+            padding: 12px; /* Apply padding to the link */
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            text-decoration: none; /* Remove underline */
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+
+        .card-button a:hover {
             background: linear-gradient(135deg, #764ba2, #667eea);
-            transform: scale(1.05);
+            transform: scale(1.05); /* Apply transform to the link */
         }
 
         .prelims-card {
@@ -356,7 +363,9 @@
                     <li>Economic & Social Development</li>
                     <li>Environmental Ecology & Climate Change</li>
                 </ul>
-                <button class="card-button">Start Learning</button>
+                <button class="card-button">
+                    <a href="prelims-gs1.html">Start Learning</a>
+                </button>
             </div>
 
             <div class="card prelims-card" onclick="showNotification('CSAT Paper 2')">
@@ -370,7 +379,9 @@
                     <li>General Mental Ability</li>
                     <li>Basic Numeracy & Data Interpretation</li>
                 </ul>
-                <button class="card-button">Practice Now</button>
+                <button class="card-button">
+                    <a href="prelims-csat.html">Practice Now</a>
+                </button>
             </div>
         </div>
 
@@ -387,7 +398,9 @@
                     <li>Environmental & Technological Themes</li>
                     <li>Essay Writing Techniques</li>
                 </ul>
-                <button class="card-button">Master Essays</button>
+                <button class="card-button">
+                    <a href="mains-essay.html">Master Essays</a>
+                </button>
             </div>
 
             <div class="card mains-card" onclick="showNotification('General Studies 1')">
@@ -401,7 +414,9 @@
                     <li>World Geography & Indian Geography</li>
                     <li>Society & Social Issues</li>
                 </ul>
-                <button class="card-button"><a href="gs1.html">Explore GS1</a></button>
+                <button class="card-button">
+                    <a href="gs1.html">Explore GS1</a>
+                </button>
             </div>
 
             <div class="card mains-card" onclick="showNotification('General Studies 2')">
@@ -415,7 +430,9 @@
                     <li>International Relations</li>
                     <li>Bilateral Relations & Organizations</li>
                 </ul>
-                <button class="card-button">Study Governance</button>
+                <button class="card-button">
+                    <a href="mains-gs2.html">Study Governance</a>
+                </button>
             </div>
 
             <div class="card mains-card" onclick="showNotification('General Studies 3')">
@@ -429,7 +446,9 @@
                     <li>Internal Security & Defence</li>
                     <li>Agriculture & Rural Development</li>
                 </ul>
-                <button class="card-button">Learn Economics</button>
+                <button class="card-button">
+                    <a href="mains-gs3.html">Learn Economics</a>
+                </button>
             </div>
 
             <div class="card mains-card" onclick="showNotification('General Studies 4')">
@@ -443,7 +462,9 @@
                     <li>Emotional Intelligence</li>
                     <li>Case Studies & Applied Ethics</li>
                 </ul>
-                <button class="card-button">Build Ethics</button>
+                <button class="card-button">
+                    <a href="mains-gs4.html">Build Ethics</a>
+                </button>
             </div>
         </div>
 
@@ -460,7 +481,9 @@
                     <li>Personnel Administration</li>
                     <li>Financial Administration</li>
                 </ul>
-                <button class="card-button">Choose Optional</button>
+                <button class="card-button">
+                    <a href="optional-pubad.html">Choose Optional</a>
+                </button>
             </div>
 
             <div class="card optional-card" onclick="showNotification('Geography Optional')">
@@ -474,7 +497,9 @@
                     <li>Models & Theories</li>
                     <li>Practical Geography</li>
                 </ul>
-                <button class="card-button">Explore Geography</button>
+                <button class="card-button">
+                    <a href="optional-geo.html">Explore Geography</a>
+                </button>
             </div>
 
             <div class="card optional-card" onclick="showNotification('History Optional')">
@@ -488,7 +513,9 @@
                     <li>Indian History (Detailed)</li>
                     <li>Historiography</li>
                 </ul>
-                <button class="card-button">Study History</button>
+                <button class="card-button">
+                    <a href="optional-history.html">Study History</a>
+                </button>
             </div>
 
             <div class="card optional-card" onclick="showNotification('More Optionals')">
@@ -502,7 +529,9 @@
                     <li>Economics</li>
                     <li>Literature Subjects</li>
                 </ul>
-                <button class="card-button">View All</button>
+                <button class="card-button">
+                    <a href="optional-others.html">View All</a>
+                </button>
             </div>
         </div>
 
@@ -519,7 +548,9 @@
                     <li>Communication Skills</li>
                     <li>Body Language & Confidence</li>
                 </ul>
-                <button class="card-button">Book Mock Interview</button>
+                <button class="card-button">
+                    <a href="interview-prep.html">Book Mock Interview</a>
+                </button>
             </div>
 
             <div class="card personality-card" onclick="showNotification('DAF Based Questions')">
@@ -533,14 +564,18 @@
                     <li>Home State/District Knowledge</li>
                     <li>Optional Subject Expertise</li>
                 </ul>
-                <button class="card-button">Analyze DAF</button>
+                <button class="card-button">
+                    <a href="daf-prep.html">Analyze DAF</a>
+                </button>
             </div>
         </div>
 
         <footer class="footer">
             <h3>🚀 Start Your UPSC Journey Today!</h3>
             <p>Join thousands of successful candidates who achieved their dreams with UPSC Master</p>
-            <button class="card-button" style="max-width: 300px; margin: 20px auto;" onclick="showNotification('Welcome to UPSC Master!')">Get Started Now</button>
+            <button class="card-button" style="max-width: 300px; margin: 20px auto;">
+                <a href="signup.html" onclick="showNotification('Welcome to UPSC Master!')" style="display: block; width: 100%;">Get Started Now</a>
+            </button>
         </footer>
     </div>
 
@@ -551,7 +586,7 @@
             const notification = document.getElementById('notification');
             notification.textContent = `🎉 ${subject} module accessed! Start your preparation now.`;
             notification.style.display = 'block';
-            
+
             setTimeout(() => {
                 notification.style.display = 'none';
             }, 3000);
@@ -562,7 +597,7 @@
             card.addEventListener('mouseenter', function() {
                 this.style.transform = 'translateY(-10px) scale(1.02)';
             });
-            
+
             card.addEventListener('mouseleave', function() {
                 this.style.transform = 'translateY(0) scale(1)';
             });
