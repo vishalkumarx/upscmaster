@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPSC GS1 - Complete Subject Coverage | UPSC Master</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(-45deg, #667eea, #764ba2, #f093fb, #f5576c);
+            background-size: 400% 400%;
+            animation: gradientShift 20s ease infinite;
+            min-height: 100vh;
+        }
+
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        .breadcrumb {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 12px 20px;
+            border-radius: 25px;
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .breadcrumb:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.05);
+        }
+
+        .section-title {
+            color: white;
+            font-size: 2.2rem;
+            text-align: center;
+            margin: 50px 0 30px 0;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 120px;
+            height: 4px;
+            background: linear-gradient(90deg, #ffd700, #ffed4e);
+            margin: 15px auto;
+            border-radius: 2px;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 35px 30px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+            transition: all 0.4s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            transition: left 0.6s;
+        }
+
+        .card:hover::before {
+            left: 100%;
+        }
+
+        .card:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+        }
+
+        .card-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            text-align: center;
+            filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.1));
+        }
+
+        .card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #2c3e50;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .card p {
+            color: #666;
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+        }
+
+        .card-topics {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 25px;
+        }
+
+        .card-topics li {
+            padding: 8px 0;
+            color: #555;
+            position: relative;
+            padding-left: 25px;
+            font-size: 1rem;
+        }
+
+        .card-topics li::before {
+            content: '📚';
+            position: absolute;
+            left: 0;
+            font-size: 1.2rem;
+        }
+
+        .card-subtopics {
+            background: rgba(52, 152, 219, 0.1);
+            border-radius: 10px;
+            padding: 15px;
+            margin-top: 15px;
+        }
+
+        .card-subtopics h4 {
+            color: #3498db;
+            font-size: 1rem;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .subtopic-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .subtopic-list li {
+            padding: 3px 0;
+            color: #666;
+            font-size: 0.9rem;
+            position: relative;
+            padding-left: 15px;
+        }
+
+        .subtopic-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #3498db;
+            font-weight: bold;
+        }
+
+        .card-button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            text-decoration: none;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            border: none;
+            font-size: 1.1rem;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .card-button:hover {
+            background: linear-gradient(135deg, #764ba2, #f093fb);
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(118, 75, 162, 0.4);
+        }
+
+        .history-card {
+            border-left: 6px solid #e74c3c;
+        }
+
+        .geography-card {
+            border-left: 6px solid #27ae60;
+        }
+
+        .polity-card {
+            border-left: 6px solid #3498db;
+        }
+
+        .economy-card {
+            border-left: 6px solid #f39c12;
+        }
+
+        .environment-card {
+            border-left: 6px solid #16a085;
+        }
+
+        .culture-card {
+            border-left: 6px solid #9b59b6;
+        }
+
+        .stats-section {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 50px 0;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .stat-item {
+            color: white;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #ffd700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .stat-label {
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+
+        .footer {
+            text-align: center;
+            color: white;
+            margin-top: 50px;
+            padding: 30px;
+            background: rgba(0,0,0,0.2);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .cards-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .card {
+                padding: 25px 20px;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #27ae60, #2ecc71);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 10px;
+            display: none;
+            z-index: 1000;
+            animation: slideIn 0.4s ease;
+            box-shadow: 0 5px 15px rgba(39, 174, 96, 0.3);
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        .progress-indicator {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 30px 0;
+            text-align: center;
+            color: white;
+        }
+
+        .progress-bar {
+            background: rgba(255, 255, 255, 0.3);
+            height: 8px;
+            border-radius: 4px;
+            margin: 15px 0;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            background: linear-gradient(90deg, #ffd700, #ffed4e);
+            height: 100%;
+            width: 0%;
+            border-radius: 4px;
+            animation: fillProgress 3s ease-in-out;
+        }
+
+        @keyframes fillProgress {
+            to { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <a href="#" class="breadcrumb" onclick="showNotification('Returning to Main Page')">🏠 UPSC Master Home</a>
+            <h1>📚 General Studies Paper 1</h1>
+            <p>Complete Coverage of History, Geography, Polity, Economy & Environment</p>
+            
+            <div class="progress-indicator">
+                <h3>Your GS1 Learning Progress</h3>
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+                <p>Complete all modules to master GS1 syllabus</p>
+            </div>
+        </header>
+
+        <section class="stats-section">
+            <h2 style="color: white; margin-bottom: 20px;">📊 GS1 at a Glance</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">6</div>
+                    <div class="stat-label">Major Subjects</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">200+</div>
+                    <div class="stat-label">Key Topics</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Practice Questions</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100</div>
+                    <div class="stat-label">Marks Weightage</div>
+                </div>
+            </div>
+        </section>
+
+        <h2 class="section-title">🏛️ History of India & Indian National Movement</h2>
+        <div class="cards-grid">
+            <div class="card history-card" onclick="showNotification('Ancient Indian History')">
+                <div class="card-icon">🏺</div>
+                <h3>Ancient Indian History</h3>
+                <p>From Indus Valley Civilization to Gupta Empire</p>
+                <ul class="card-topics">
+                    <li>Indus Valley Civilization</li>
+                    <li>Vedic Period & Literature</li>
+                    <li>Mauryan Empire</li>
+                    <li>Gupta Period - Golden Age</li>
+                </ul>
+                <div class="card-subtopics">
+                    <h4>Key Focus Areas</h4>
+                    <ul class="subtopic-list">
+                        <li>Archaeological Evidence</li>
+                        <li>Political Structures</li>
+                        <li>Social & Economic Life</li>
+                        <li>Religious Developments</li>
+                    </ul>
+                </div>
+                <button class="card-button">Start Ancient History</button>
+            </div>
+
+            <div class="card history-card" onclick="showNotification('Medieval Indian History')">
+                <div class="card-icon">🏰</div>
+                <h3>Medieval Indian History</h3>
+                <p>Delhi Sultanate to Mughal Empire</p>
+                <ul class="card-topics">
+                    <li>Delhi Sultanate</li>
+                    <li>Mughal Empire</li>
+                    <li>Vijayanagara Empire</li>
+                    <li>Regional Kingdoms</li>
+                </ul>
+                <div class="card-subtopics">
+                    <h4>Important Aspects</h4>
+                    <ul class="subtopic-list">
+                        <li>Administrative Systems</li>
+                        <li>Cultural Synthesis</li>
+                        <li>Architecture & Art</li>
+                        <li>Trade & Commerce</li>
+                    </ul>
+                </div>
+                <button class="card-button">Explore Medieval Era</button>
+            </div>
+
+            <div class="card history-card" onclick="showNotification('Modern Indian History')">
+                <div class="card-icon">🚂</div>
+                <h3>Modern Indian History</h3>
+                <p>Colonial Period & Freedom Struggle</p>
+                <ul class="card-topics">
+                    <li>British Colonial Rule</li>
+                    <li>Freedom Movement</li>
+                    <li>Social Reform Movements</li>
+                    <li>Partition & Independence</li>
+                </ul>
+                <div class="card-subtopics">
+                    <h4>Critical Topics</h4>
+                    <ul class="subtopic-list">
+                        <li>1857 Revolt</li>
+                        <li>Congress & Muslim League</li>
+                        <li>Gandhi's Role</li>
+                        <li>Quit India Movement</li>
+                    </ul>
+                </div>
+                <button class="card-button">Study Freedom Struggle</button>
+            </div>
+        </div>
+
+        <h2 class="section-title">🌍 Geography - Physical & Human</h2>
+        <div class="cards-grid">
+            <div class="card geography-card" onclick="showNotification('Physical Geography')">
+                <div class="card-icon">🏔️</div>
+                <h3>Physical Geography</h3>
+                <p>Earth's physical features and processes</p>
+                <ul class="card-topics">
+                    <li>Geomorphology</li>
+                    <li>Climatology</li>
+                    <li>Oceanography</li>
+                    <li>Biogeography</li>
+                </ul>
+                <div class="card-subtopics">
+                    <h4>Core Concepts</h4>
+                    <ul class="subtopic-list">
+                        <li>Plate Tectonics</li>
+                        <li>Weather & Climate</li>
+                        <li>Ocean Currents</li>
+                        <li>Natural Vegetation</li>
+                    </ul>
+                </div>
+                <button class="card-button">Learn Physical Geography</button>
+            </div>
+
+            <div class="card geography-card" onclick="showNotification('Human Geography')">
+                <div class="card-icon">👥</div>
+                <h3>Human Geography</h3>
+                <p>Human activities and their spatial patterns</p>
+                <ul class="card-topics">
+                    <li>Population Geography</li>
+                    <li>Settlement Geography</li>
+                    <li>Economic Geography</li>
+                    <li>Cultural Geography</li>
+                </ul>
+                <div class="card-subtopics">
+                    <h4>Important Areas</h4>
+                    <ul class="subtopic-list">
+                        <li>Migration Patterns</li>
+                        <li>Urbanization</li>
+                        <li>Agricultural Systems</li>
+                        <li>Industrial Location</li>
+                    </ul>
+                </div>
+                <button class="card-button">Explore Human Geography</button>
+            </div>
+
+            <div class="card geography-card" onclick="showNotification('Indian Geography')">
+                <div class="card-icon">🇮🇳</div>
+                <h3>Indian Geography</h3>
+                <p>Comprehensive study of India's geography</p>
+                <ul class="card-topics">
+                    <li>Physical Features</li>
+                    <li>Climate & Monsoons</li>
+                    <li>Natural Resources</li>
+                    <li>Agriculture & Industries</li>
+                </ul>
+                <div class="card-subtopics">
+                    <h4>Special Focus</h4>
+                    <ul class="subtopic-list">
+                        <li>River Systems</li>
+                        <li>Mineral Resources</li>
+                        <li>Transport Networks</li>
+                        <li>Regional Development</li>
+                    </ul>
+                </div>
+                <button class="card-button">Master Indian Geography</button>
+            </div>
+        </div>
+
+        <h2 class="section-title">⚖️ Indian Polity & Governance</h2>
+        <div class="cards-grid">
+            <div class="card polity-card" onclick="showNotification('Constitutional Framework')">
+                <div class="card-icon">📜</div>
+                <h3>Constitutional Framework</h3>
+                <p>Foundation of Indian democracy</p>
+                <ul class="card-topics">
+                    <li>Constitution Making</li>
+                    <li>Fundamental Rights</li>
+                    <li>Directive Principles</li>
+                    <li>Fundamental Duties</li>
+                </ul>
+                <div class="card-subtopics">
+                    <h4>Key Features</h4>
+                    <ul class="subtopic-list">
+                        <li>Federal Structure</li>
+                        <li>Parliamentary System</li>
+                        <li>Independent Judiciary</li>
+                        <li>Constitutional Amendments</li>
+                    </ul>
+                </div>
+                <button class="card-button">Study Constitution</button>
+            </div>
+
+            <div class="card polity-card" onclick="showNotification('Union Government')">
+                <div class="card-icon">🏛️</div>
+                <h3>Union Government</h3>
+                <p>Executive, Legislature & Judiciary</p>
+                <ul class="card-topics">
+                    <li>President & Prime Minister</li>
+                    <li>Parliament</li>
+                    <li>Supreme Court</li>
+                    <li>Council of Ministers</li>
+                </ul>
+                <div class="card-subtopics">
+                    <h4>Important Aspects</h4>
+                    <ul class="subtopic-list">
+                        <li>Election Process</li>
+                        <li>Legislative Procedure</li>
+                        <li>Judicial Review</li>
+                        <li>Emergency Provisions</li>
+                    </ul>
+                </div>
+                <button class="card-button">Learn Governance</button>
+            </div>
+        </div>
+
+        <h2 class="section-title">💰 Economic & Social Development</h2>
+        <div class="cards-grid">
+            <div class="card economy-card" onclick="showNotification('Indian Economy Basics')">
+                <div class="card-icon">📈</div>
+                <h3>Indian Economy Basics</h3>
+                <p>Economic structure and development</p>
+                <ul class="card-topics">
+                    <li>Economic Planning</li>
+                    <li>Five Year Plans</li>
+                    <li>Economic Reforms</li>
+                    <li>Sectoral Analysis</li>
+                </ul>
+                <div class="card-subtopics">
+                    <h4>Core Areas</h4>
+                    <ul class="subtopic-list">
+                        <li>GDP & Growth</li>
+                        <li>Inflation & Unemployment</li>
+                        <li>Banking & Finance</li>
+                        <li>Trade & Commerce</li>
+                    </ul>
+                </div>
+                <button class="card-button">Study Economy</button>
+            </div>
+
+            <div class="card economy-card" onclick="showNotification('Social Development')">
+                <div class="card-icon">👨‍👩‍👧‍👦</div>
+                <h3>Social Development</h3>
+                <p>Social issues and development challenges</p>
+                <ul class="card-topics">
+                    <li>Poverty & Inequality</li>
+                    <li>Education & Health</li>
+                    <li>Social Justice</li>
+                    <li>Women Empowerment</li>
+                </ul>
+                <div class="card-subtopics">
+                    <h4>Key Issues</h4>
+                    <ul class="subtopic-list">
+                        <li>Human Development Index</li>
+                        <li>Social Security Schemes</li>
+                        <li>Rural Development</li>
+                        <li>Urban Challenges</li>
+                    </ul>
+                </div>
+                <button class="card-button">Explore Social Issues</button>
+            </div>
+        </div>
+
+        <h2 class="section-title">🌱 Environmental Ecology & Climate Change</h2>
+        <div class="cards-grid">
+            <div class="card environment-card" onclick="showNotification('Environmental Issues')">
+                <div class="card-icon">🌍</div>
+                <h3>Environmental Issues</h3>
+                <p>Current environmental challenges</p>
+                <ul class="card-topics">
+                    <li>Climate Change</li>
+                    <li>Pollution Control</li>
+                    <li>Conservation Efforts</li>
+                    <li>Sustainable Development</li>
+                </ul>
+                <div class="card-subtopics">
+                    <h4>Critical Areas</h4>
+                    <ul class="subtopic-list">
+                        <li>Global Warming</li>
+                        <li>Biodiversity Loss</li>
+                        <li>Renewable Energy</li>
+                        <li>Environmental Laws</li>
+                    </ul>
+                </div>
+                <button class="card-button">Learn Environment</button>
+            </div>
+
+            <div class="card environment-card" onclick="showNotification('Disaster Management')">
+                <div class="card-icon">🚨</div>
+                <h3>Disaster Management</h3>
+                <p>Disaster preparedness and response</p>
+                <ul class="card-topics">
+                    <li>Natural Disasters</li>
+                    <li>Man-made Disasters</li>
+                    <li>Risk Assessment</li>
+                    <li>Mitigation Strategies</li>
+                </ul>
+                <div class="card-subtopics">
+                    <h4>Focus Areas</h4>
+                    <ul class="subtopic-list">
+                        <li>Early Warning Systems</li>
+                        <li>Emergency Response</li>
+                        <li>Recovery & Rehabilitation</li>
+                        <li>Community Preparedness</li>
+                    </ul>
+                </div>
+                <button class="card-button">Study Disasters</button>
+            </div>
+        </div>
+
+        <h2 class="section-title">🎭 Art & Culture</h2>
+        <div class="cards-grid">
+            <div class="card culture-card" onclick="showNotification('Indian Art & Culture')">
+                <div class="card-icon">🎨</div>
+                <h3>Indian Art & Culture</h3>
+                <p>Rich heritage and cultural traditions</p>
+                <ul class="card-topics">
+                    <li>Classical Arts</li>
+                    <li>Folk Traditions</li>
+                    <li>Literature</li>
+                    <li>Festivals & Customs</li>
+                </ul>
+                <div class="card-subtopics">
+                    <h4>Cultural Elements</h4>
+                    <ul class="subtopic-list">
+                        <li>Dance & Music</li>
+                        <li>Paintings & Sculptures</li>
+                        <li>Architecture Styles</li>
+                        <li>UNESCO World Heritage</li>
+                    </ul>
+                </div>
+                <button class="card-button">Explore Culture</button>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <h3>🎯 Master GS1 with Confidence!</h3>
+            <p>Comprehensive coverage of all GS1 topics with expert guidance and practice materials</p>
+            <button class="card-button" style="max-width: 400px; margin: 20px auto;" onclick="showNotification('Starting comprehensive GS1 preparation!')">Begin Complete GS1 Course</button>
+        </footer>
+    </div>
+
+    <div class="notification" id="notification"></div>
+
+    <script>
+        function showNotification(subject) {
+            const notification = document.getElementById('notification');
+            notification.textContent = `🚀 ${subject} - Ready to begin your learning journey!`;
+            notification.style.display = 'block';
+            
+            setTimeout(() => {
+                notification.style.display = 'none';
+            }, 4000);
+        }
+
+        // Enhanced card interactions
+        document.querySelectorAll('.card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-15px) scale(1.02)';
+                this.style.boxShadow = '0 25px 50px rgba(0,0,0,0.3)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+                this.style.boxShadow = '0 15px 35px rgba(0,0,0,0.2)';
+            });
+        });
+
+        // Intersection Observer for animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }, index * 100);
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        document.querySelectorAll('.card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+            observer.observe(card);
+        });
+
+        // Progress tracking simulation
+        let completedModules = 0;
+        document.querySelectorAll('.card-button').forEach(button => {
+            button.addEventListener('click', function() {
+                completedModules++;
+                const progressFill = document.querySelector('.progress-fill');
+                const totalModules = document.querySelectorAll('.card').length;
+                const progressPercentage = (completedModules / totalModules) * 100;
+                progressFill.style.width = `${Math.min(progressPercentage, 100)}%`;
+                
+                if (completedModules === totalModules) {
+                    showNotification('Congratulations! You have completed all GS1 modules!');
+                }
+            });
+        });
+
+        // Dynamic background color changes based on scroll
+        window.addEventListener('scroll', () => {
+            const scrollPercent = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
+            const hue = scrollPercent * 360;
+            document.body.style.filter = `hue-rotate(${hue}deg)`;
+        });
+    </script>
+</body>
+</html>
