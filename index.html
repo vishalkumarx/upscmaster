@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPSC Master - Complete Civil Services Preparation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            min-height: 100vh;
+        }
+
+        @keyframes gradientShift {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .section-title {
+            color: white;
+            font-size: 2rem;
+            text-align: center;
+            margin: 40px 0 30px 0;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 3px;
+            background: #ffd700;
+            margin: 10px auto;
+            border-radius: 2px;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 30px 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .card:hover::before {
+            left: 100%;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        .card-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #2c3e50;
+            text-align: center;
+        }
+
+        .card p {
+            color: #666;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .card-topics {
+            list-style: none;
+            padding: 0;
+        }
+
+        .card-topics li {
+            padding: 5px 0;
+            color: #555;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .card-topics li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #27ae60;
+            font-weight: bold;
+        }
+
+        .card-button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            border: none;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .card-button:hover {
+            background: linear-gradient(135deg, #764ba2, #667eea);
+            transform: scale(1.05);
+        }
+
+        .prelims-card {
+            border-left: 5px solid #e74c3c;
+        }
+
+        .mains-card {
+            border-left: 5px solid #3498db;
+        }
+
+        .optional-card {
+            border-left: 5px solid #f39c12;
+        }
+
+        .personality-card {
+            border-left: 5px solid #9b59b6;
+        }
+
+        .stats-section {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .stat-item {
+            color: white;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #ffd700;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            margin-top: 10px;
+        }
+
+        .footer {
+            text-align: center;
+            color: white;
+            margin-top: 50px;
+            padding: 20px;
+            background: rgba(0,0,0,0.2);
+            border-radius: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .cards-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .card {
+                padding: 20px;
+            }
+        }
+
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #27ae60;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px;
+            display: none;
+            z-index: 1000;
+            animation: slideIn 0.3s ease;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(100%); }
+            to { transform: translateX(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🏛️ UPSC Master</h1>
+            <p>Your Complete Guide to Civil Services Success</p>
+        </header>
+
+        <section class="stats-section">
+            <h2 style="color: white; margin-bottom: 20px;">Why Choose UPSC Master?</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Syllabus Coverage</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Subjects Covered</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">1000+</div>
+                    <div class="stat-label">Practice Questions</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Study Support</div>
+                </div>
+            </div>
+        </section>
+
+        <h2 class="section-title">📚 UPSC Prelims</h2>
+        <div class="cards-grid">
+            <div class="card prelims-card" onclick="showNotification('General Studies Paper 1')">
+                <div class="card-icon">🌍</div>
+                <h3>General Studies Paper 1</h3>
+                <p>Foundation of UPSC preparation covering diverse topics</p>
+                <ul class="card-topics">
+                    <li>History of India & Indian National Movement</li>
+                    <li>Geography - Physical & Human</li>
+                    <li>Indian Polity & Governance</li>
+                    <li>Economic & Social Development</li>
+                    <li>Environmental Ecology & Climate Change</li>
+                </ul>
+                <button class="card-button">Start Learning</button>
+            </div>
+
+            <div class="card prelims-card" onclick="showNotification('CSAT Paper 2')">
+                <div class="card-icon">🧮</div>
+                <h3>CSAT - Paper 2</h3>
+                <p>Aptitude test focusing on analytical and logical reasoning</p>
+                <ul class="card-topics">
+                    <li>Comprehension & Communication Skills</li>
+                    <li>Logical Reasoning & Analytical Ability</li>
+                    <li>Decision Making & Problem Solving</li>
+                    <li>General Mental Ability</li>
+                    <li>Basic Numeracy & Data Interpretation</li>
+                </ul>
+                <button class="card-button">Practice Now</button>
+            </div>
+        </div>
+
+        <h2 class="section-title">📝 UPSC Mains</h2>
+        <div class="cards-grid">
+            <div class="card mains-card" onclick="showNotification('Essay Paper')">
+                <div class="card-icon">✍️</div>
+                <h3>Essay Paper</h3>
+                <p>Express your thoughts and ideas coherently</p>
+                <ul class="card-topics">
+                    <li>Contemporary Issues & Current Affairs</li>
+                    <li>Philosophical & Abstract Topics</li>
+                    <li>Social & Economic Issues</li>
+                    <li>Environmental & Technological Themes</li>
+                    <li>Essay Writing Techniques</li>
+                </ul>
+                <button class="card-button">Master Essays</button>
+            </div>
+
+            <div class="card mains-card" onclick="showNotification('General Studies 1')">
+                <div class="card-icon">🏛️</div>
+                <h3>General Studies 1</h3>
+                <p>Indian Heritage, History, Culture & Geography</p>
+                <ul class="card-topics">
+                    <li>Ancient & Medieval History</li>
+                    <li>Modern Indian History</li>
+                    <li>Art & Culture</li>
+                    <li>World Geography & Indian Geography</li>
+                    <li>Society & Social Issues</li>
+                </ul>
+                <button class="card-button">Explore History</button>
+            </div>
+
+            <div class="card mains-card" onclick="showNotification('General Studies 2')">
+                <div class="card-icon">⚖️</div>
+                <h3>General Studies 2</h3>
+                <p>Governance, Constitution, Polity & International Relations</p>
+                <ul class="card-topics">
+                    <li>Indian Constitution & Polity</li>
+                    <li>Governance & Government Policies</li>
+                    <li>Social Justice & Welfare Schemes</li>
+                    <li>International Relations</li>
+                    <li>Bilateral Relations & Organizations</li>
+                </ul>
+                <button class="card-button">Study Governance</button>
+            </div>
+
+            <div class="card mains-card" onclick="showNotification('General Studies 3')">
+                <div class="card-icon">🏭</div>
+                <h3>General Studies 3</h3>
+                <p>Technology, Economic Development & Environment</p>
+                <ul class="card-topics">
+                    <li>Economic Development & Planning</li>
+                    <li>Science & Technology</li>
+                    <li>Environment & Disaster Management</li>
+                    <li>Internal Security & Defence</li>
+                    <li>Agriculture & Rural Development</li>
+                </ul>
+                <button class="card-button">Learn Economics</button>
+            </div>
+
+            <div class="card mains-card" onclick="showNotification('General Studies 4')">
+                <div class="card-icon">🎯</div>
+                <h3>General Studies 4</h3>
+                <p>Ethics, Integrity & Aptitude</p>
+                <ul class="card-topics">
+                    <li>Ethics & Human Interface</li>
+                    <li>Attitude, Aptitude & Foundational Values</li>
+                    <li>Civil Service Values & Ethics</li>
+                    <li>Emotional Intelligence</li>
+                    <li>Case Studies & Applied Ethics</li>
+                </ul>
+                <button class="card-button">Build Ethics</button>
+            </div>
+        </div>
+
+        <h2 class="section-title">📖 Optional Subjects</h2>
+        <div class="cards-grid">
+            <div class="card optional-card" onclick="showNotification('Public Administration')">
+                <div class="card-icon">🏢</div>
+                <h3>Public Administration</h3>
+                <p>Most popular optional subject with high success rate</p>
+                <ul class="card-topics">
+                    <li>Administrative Theory</li>
+                    <li>Indian Administration</li>
+                    <li>Development Administration</li>
+                    <li>Personnel Administration</li>
+                    <li>Financial Administration</li>
+                </ul>
+                <button class="card-button">Choose Optional</button>
+            </div>
+
+            <div class="card optional-card" onclick="showNotification('Geography Optional')">
+                <div class="card-icon">🗺️</div>
+                <h3>Geography</h3>
+                <p>Comprehensive coverage of physical and human geography</p>
+                <ul class="card-topics">
+                    <li>Physical Geography</li>
+                    <li>Human Geography</li>
+                    <li>Regional Planning</li>
+                    <li>Models & Theories</li>
+                    <li>Practical Geography</li>
+                </ul>
+                <button class="card-button">Explore Geography</button>
+            </div>
+
+            <div class="card optional-card" onclick="showNotification('History Optional')">
+                <div class="card-icon">📜</div>
+                <h3>History</h3>
+                <p>Ancient, Medieval and Modern World History</p>
+                <ul class="card-topics">
+                    <li>Ancient World History</li>
+                    <li>Medieval World History</li>
+                    <li>Modern World History</li>
+                    <li>Indian History (Detailed)</li>
+                    <li>Historiography</li>
+                </ul>
+                <button class="card-button">Study History</button>
+            </div>
+
+            <div class="card optional-card" onclick="showNotification('More Optionals')">
+                <div class="card-icon">📚</div>
+                <h3>Other Optionals</h3>
+                <p>Psychology, Sociology, Political Science & More</p>
+                <ul class="card-topics">
+                    <li>Psychology</li>
+                    <li>Sociology</li>
+                    <li>Political Science</li>
+                    <li>Economics</li>
+                    <li>Literature Subjects</li>
+                </ul>
+                <button class="card-button">View All</button>
+            </div>
+        </div>
+
+        <h2 class="section-title">🎤 Personality Test</h2>
+        <div class="cards-grid">
+            <div class="card personality-card" onclick="showNotification('Interview Preparation')">
+                <div class="card-icon">👥</div>
+                <h3>Interview Preparation</h3>
+                <p>Final stage to achieve your IAS dream</p>
+                <ul class="card-topics">
+                    <li>Mock Interview Sessions</li>
+                    <li>Current Affairs Discussion</li>
+                    <li>Personality Development</li>
+                    <li>Communication Skills</li>
+                    <li>Body Language & Confidence</li>
+                </ul>
+                <button class="card-button">Book Mock Interview</button>
+            </div>
+
+            <div class="card personality-card" onclick="showNotification('DAF Based Questions')">
+                <div class="card-icon">📋</div>
+                <h3>DAF Based Preparation</h3>
+                <p>Detailed Application Form focused preparation</p>
+                <ul class="card-topics">
+                    <li>Hobby-based Questions</li>
+                    <li>Educational Background</li>
+                    <li>Work Experience Analysis</li>
+                    <li>Home State/District Knowledge</li>
+                    <li>Optional Subject Expertise</li>
+                </ul>
+                <button class="card-button">Analyze DAF</button>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <h3>🚀 Start Your UPSC Journey Today!</h3>
+            <p>Join thousands of successful candidates who achieved their dreams with UPSC Master</p>
+            <button class="card-button" style="max-width: 300px; margin: 20px auto;" onclick="showNotification('Welcome to UPSC Master!')">Get Started Now</button>
+        </footer>
+    </div>
+
+    <div class="notification" id="notification"></div>
+
+    <script>
+        function showNotification(subject) {
+            const notification = document.getElementById('notification');
+            notification.textContent = `🎉 ${subject} module accessed! Start your preparation now.`;
+            notification.style.display = 'block';
+            
+            setTimeout(() => {
+                notification.style.display = 'none';
+            }, 3000);
+        }
+
+        // Add smooth scrolling effect
+        document.querySelectorAll('.card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Add loading animation for cards
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        });
+
+        document.querySelectorAll('.card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>
