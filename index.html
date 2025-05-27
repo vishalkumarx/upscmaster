@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crack UPSC - Complete Civil Services Preparation</title>
     <style>
+        /* Import Google Font for "CRACK UPSC" text */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
+
         * {
             margin: 0;
             padding: 0;
@@ -19,6 +22,7 @@
             background-size: 400% 400%;
             animation: gradientShift 15s ease infinite;
             min-height: 100vh;
+            padding-top: 90px; /* Space for the sticky header */
         }
 
         @keyframes gradientShift {
@@ -39,22 +43,48 @@
             padding: 20px;
         }
 
+        /* NEW HEADER STYLES - Adjusted after logo removal */
         .header {
-            text-align: center;
-            margin-bottom: 50px;
+            position: fixed; /* Make header sticky */
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.15); /* Semi-transparent background */
+            backdrop-filter: blur(10px); /* Frosted glass effect */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            z-index: 1000;
+            padding: 15px 30px;
+            display: flex; /* Use flexbox for layout */
+            align-items: center;
+            justify-content: flex-start; /* Align content to the left */
             color: white;
+            transition: all 0.3s ease;
         }
 
-        .header h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        /* Removed .logo styles */
+
+        .header-content {
+            text-align: left; /* Keep header content to the left */
+            /* Removed flex-grow: 1; as it's no longer needed for spacing with the logo */
+            /* Removed margin-left: 20px; as there's no logo to space from */
         }
 
-        .header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
+        .header-content h1 {
+            font-family: 'Roboto Condensed', sans-serif; /* New font for H1 */
+            font-size: 2.5rem; /* Slightly larger for emphasis */
+            margin: 0; /* Remove default margin */
+            text-shadow: none; /* Removed heavy shadow */
+            letter-spacing: 1px; /* Add slight letter spacing */
+            line-height: 1.2; /* Adjust line height for better appearance */
         }
+
+        .header-content p {
+            font-size: 1rem; /* Smaller tagline for sticky header */
+            opacity: 0.8;
+            margin-top: 5px;
+        }
+
+        /* END NEW HEADER STYLES */
 
         .section-title {
             color: white;
@@ -228,19 +258,36 @@
         }
 
         @media (max-width: 768px) {
+            body {
+                padding-top: 70px; /* Adjust padding for smaller header on mobile */
+            }
             .container {
                 padding: 15px;
             }
-            
-            .header h1 {
-                font-size: 2rem;
+            .header {
+                flex-direction: column; /* Stack items vertically on small screens */
+                align-items: flex-start; /* Align all content to the left */
+                padding: 10px 15px;
             }
-            
+            /* Removed .logo styles from media query */
+            .header-content {
+                /* No margin-left needed here anymore */
+                width: 100%; /* Take full width */
+                text-align: left; /* Keep text left-aligned */
+            }
+            .header-content h1 {
+                font-size: 1.8rem;
+            }
+            .header-content p {
+                font-size: 0.9rem;
+            }
+            .section-title {
+                font-size: 1.8rem;
+            }
             .cards-grid {
                 grid-template-columns: 1fr;
                 gap: 20px;
             }
-            
             .card {
                 padding: 20px;
             }
@@ -268,8 +315,10 @@
 <body>
     <div class="container">
         <header class="header">
-            <h1>🏛️ CRACK UPSC</h1>
-            <p>Simplify. Strategize. Succeed.</p>
+            <div class="header-content">
+                <h1>🏛️ CRACK UPSC</h1>
+                <p>Simplify. Strategize. Succeed.</p>
+            </div>
         </header>
 
         <section class="stats-section">
