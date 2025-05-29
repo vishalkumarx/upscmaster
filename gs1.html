@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UPSC GS1 - Complete Subject Coverage | UPSC Master</title>
     <style>
+        /* Import Google Font for "CRACK UPSC" text */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
+
         * {
             margin: 0;
             padding: 0;
@@ -19,6 +22,7 @@
             background-size: 400% 400%;
             animation: gradientShift 20s ease infinite;
             min-height: 100vh;
+            padding-top: 90px; /* Space for the initial header height */
         }
 
         @keyframes gradientShift {
@@ -39,19 +43,169 @@
             padding: 20px;
         }
 
+        /* HEADER & NAVBAR STYLES (COPIED FROM FIRST CODE) */
         .header {
-            text-align: center;
-            margin-bottom: 50px;
-            color: white;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: white; /* Pure White Background */
+            backdrop-filter: none; /* Remove blur effect */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            z-index: 1000;
+            padding: 15px 30px; /* Default padding */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: #333; /* Default text color for header */
+            transition: padding 0.3s ease, font-size 0.3s ease, background-color 0.3s ease;
+            flex-wrap: wrap;
         }
 
-        .header h1 {
+        /* Collapsed Header Styles */
+        .header.header-scrolled {
+            padding: 5px 30px; /* Reduced padding when scrolled */
+        }
+
+        .header-content {
+            flex-shrink: 0;
+            margin-right: 20px;
+            text-align: left; /* Ensure text alignment is kept */
+        }
+
+        .header-content h1 {
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 2.5rem; /* Default font size */
+            margin: 0;
+            text-shadow: none;
+            letter-spacing: 1px;
+            line-height: 1.2;
+            color: #333; /* Ensure explicit color */
+            transition: font-size 0.3s ease;
+        }
+
+        .header.header-scrolled .header-content h1 {
+            font-size: 1.8rem; /* Smaller font size when scrolled */
+        }
+
+        .header-content p {
+            font-size: 1rem; /* Default font size */
+            opacity: 0.8;
+            margin-top: 5px;
+            color: #555; /* Ensure explicit color */
+            transition: font-size 0.3s ease, opacity 0.3s ease;
+        }
+
+        .header.header-scrolled .header-content p {
+            font-size: 0.8rem; /* Smaller font size when scrolled */
+            opacity: 0.6; /* Slightly fade out tagline */
+        }
+
+        .navbar {
+            width: auto;
+            margin-top: 0;
+            padding: 0;
+        }
+
+        .nav-list {
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            padding: 0;
+            margin: 0;
+            align-items: center;
+        }
+
+        .nav-list li {
+            margin: 0 10px;
+            position: relative;
+        }
+
+        .nav-list a {
+            color: #333; /* Dark text for white background */
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.05rem;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: background 0.3s ease, color 0.3s ease;
+            display: block;
+        }
+
+        .nav-list a:hover {
+            background: #f0f0f0; /* Light gray hover */
+            color: #23a6d5; /* Highlight color */
+        }
+
+        /* Dropdown specific styles */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background: white; /* White background for dropdown */
+            min-width: 200px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1001;
+            border-radius: 8px;
+            padding: 10px 0;
+            top: 100%;
+            left: 0;
+            list-style: none;
+        }
+
+        .dropdown-content a {
+            color: #333; /* Dark text for dropdown links */
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            font-size: 0.95rem;
+            font-weight: normal;
+            border-radius: 0;
+        }
+
+        .dropdown-content a:hover {
+            background: #f1f1f1;
+            color: #23a6d5;
+        }
+
+        .nav-list li.dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Hamburger menu for mobile */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 1001;
+        }
+
+        .hamburger .bar {
+            width: 25px;
+            height: 3px;
+            background-color: #333; /* Dark bars for white background */
+            margin: 4px 0;
+            transition: 0.4s;
+        }
+
+        /* END HEADER & NAVBAR CHANGES */
+
+        /* Original styles below */
+        .header-content-gs1 { /* Renamed to avoid conflict */
+            text-align: center;
+            margin-bottom: 50px; /* Adjusted as main header is now fixed */
+            color: white;
+            padding-top: 50px; /* Add padding to push content down from sticky header */
+        }
+
+        .header-content-gs1 h1 {
             font-size: 3.5rem;
             margin-bottom: 10px;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
 
-        .header p {
+        .header-content-gs1 p {
             font-size: 1.3rem;
             opacity: 0.9;
             margin-bottom: 20px;
@@ -78,6 +232,7 @@
             text-align: center;
             margin: 50px 0 30px 0;
             position: relative;
+            scroll-margin-top: 90px; /* Offset for sticky header (initial height) */
         }
 
         .section-title::after {
@@ -296,28 +451,155 @@
             backdrop-filter: blur(10px);
         }
 
+        /* MEDIA QUERIES FOR RESPONSIVENESS (COPIED FROM FIRST CODE) */
         @media (max-width: 768px) {
+            body {
+                padding-top: 90px;
+            }
             .container {
                 padding: 15px;
             }
-            
-            .header h1 {
-                font-size: 2.5rem;
+            .header {
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                padding: 10px 15px; /* Adjust padding for mobile header */
+                flex-wrap: nowrap;
             }
-            
+
+            .header.header-scrolled {
+                padding: 5px 15px; /* Even smaller padding on scroll for mobile */
+            }
+
+            .header-content {
+                margin-right: 0;
+            }
+            .header-content h1 {
+                font-size: 1.8rem;
+            }
+            .header.header-scrolled .header-content h1 {
+                font-size: 1.5rem; /* Smaller on scroll for mobile */
+            }
+            .header-content p {
+                display: none; /* Hide tagline on very small screens for space */
+            }
+
+            /* Mobile Navbar Adjustments */
+            .navbar {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: white; /* White background for mobile menu */
+                box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+                padding: 0;
+                display: none;
+                flex-direction: column;
+                align-items: flex-start;
+                border-radius: 0 0 8px 8px;
+                overflow: hidden;
+                max-height: 0;
+                transition: max-height 0.4s ease-out, opacity 0.4s ease-out;
+                opacity: 0;
+            }
+
+            .navbar.active {
+                display: flex;
+                max-height: 500px;
+                opacity: 1;
+            }
+
+            .nav-list {
+                flex-direction: column;
+                width: 100%;
+                padding: 10px 0;
+                align-items: flex-start;
+            }
+
+            .nav-list li {
+                margin: 0;
+                width: 100%;
+                border-bottom: 1px solid rgba(0,0,0,0.05); /* Lighter separator for white background */
+            }
+            .nav-list li:last-child {
+                border-bottom: none;
+            }
+
+            .nav-list a {
+                color: #333; /* Dark text for mobile menu on white background */
+                padding: 12px 20px;
+                width: 100%;
+                text-align: left;
+            }
+            .nav-list a:hover {
+                background: #f0f0f0;
+            }
+
+
+            /* Mobile Dropdown Specifics */
+            .nav-list li.dropdown .dropbtn .arrow {
+                transform: rotate(0deg);
+                transition: transform 0.3s ease;
+            }
+
+            .nav-list li.dropdown.active .dropbtn .arrow {
+                transform: rotate(180deg);
+            }
+
+            .dropdown-content {
+                display: none;
+                position: static;
+                width: 100%;
+                background: rgba(0,0,0,0.05); /* Slightly darker background for nested items on white */
+                box-shadow: none;
+                border-radius: 0;
+                padding: 0;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.4s ease-out;
+            }
+
+            .nav-list li.dropdown.active .dropdown-content {
+                display: block;
+                max-height: 300px;
+            }
+
+            .dropdown-content a {
+                padding: 8px 30px;
+                color: #555; /* Darker text for sub-items */
+                font-size: 0.9rem;
+            }
+            .dropdown-content a:hover {
+                background: rgba(0,0,0,0.1);
+            }
+
+            .hamburger {
+                display: flex;
+            }
+            .hamburger.active .bar:nth-child(1) {
+                transform: translateY(8px) rotate(45deg);
+            }
+            .hamburger.active .bar:nth-child(2) {
+                opacity: 0;
+            }
+            .hamburger.active .bar:nth-child(3) {
+                transform: translateY(-8px) rotate(-45deg);
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+                scroll-margin-top: 90px;
+            }
             .cards-grid {
                 grid-template-columns: 1fr;
                 gap: 20px;
             }
-            
             .card {
                 padding: 25px 20px;
             }
-            
-            .section-title {
-                font-size: 1.8rem;
-            }
         }
+        /* End of copied media queries */
+
 
         .notification {
             position: fixed;
@@ -371,12 +653,55 @@
 <body>
     <div class="container">
         <header class="header">
-            <a href="index.html" class="breadcrumb" >🏠 Home</a>
+            <div class="header-content">
+                <h1>🏛️ UPSC Master | GS1</h1>
+                <p>Simplify. Strategize. Succeed.</p>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <nav class="navbar" id="navbar">
+                <ul class="nav-list">
+                    <li><a href="index.html#why-choose-us">Why Choose Us?</a></li>
+                    <li class="dropdown">
+                        <a href="index.html#prelims" class="dropbtn">Prelims <span class="arrow">&#9662;</span></a>
+                        <ul class="dropdown-content">
+                            <li><a href="prelims-gs1.html">General Studies Paper 1</a></li>
+                            <li><a href="prelims-csat.html">CSAT - Paper 2</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="index.html#mains" class="dropbtn">Mains <span class="arrow">&#9662;</span></a>
+                        <ul class="dropdown-content">
+                            <li><a href="mains-essay.html">Essay Paper</a></li>
+                            <li><a href="gs1.html">General Studies 1</a></li>
+                            <li><a href="gs2.html">General Studies 2</a></li>
+                            <li><a href="gs3.html">General Studies 3</a></li>
+                            <li><a href="gs4.html">General Studies 4</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="index.html#optional-subjects" class="dropbtn">Optionals <span class="arrow">&#9662;</span></a>
+                        <ul class="dropdown-content">
+                            <li><a href="optional-pubad.html">Public Administration</a></li>
+                            <li><a href="optional-geo.html">Geography</a></li>
+                            <li><a href="optional-history.html">History</a></li>
+                            <li><a href="optional-others.html">Other Optionals</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="index.html#personality-test">Interview</a></li>
+                    <li><a href="signup.html">Join Now</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="header-content-gs1">
+            <a href="index.html" class="breadcrumb">🏠 Home</a>
             <h1>📚 General Studies Paper 1</h1>
             <p>Complete Coverage of History, Geography, Polity, Economy & Environment</p>
-            
-           
-        </header>
+        </div>
 
         <section class="stats-section">
             <h2 style="color: white; margin-bottom: 20px;">📊 GS1 at a Glance</h2>
@@ -724,20 +1049,38 @@
             }, 4000);
         }
 
-        // Enhanced card interactions
-        document.querySelectorAll('.card').forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-15px) scale(1.02)';
-                this.style.boxShadow = '0 25px 50px rgba(0,0,0,0.3)';
-            });
-            
-            card.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0) scale(1)';
-                this.style.boxShadow = '0 15px 35px rgba(0,0,0,0.2)';
+        // Smooth scrolling effect for section links (adjusted for current page's IDs if needed)
+        // Note: The main navigation links point back to index.html with section IDs.
+        // For local scrolling on THIS page, you'd need unique IDs for sections.
+        // For now, only the original 'Home' breadcrumb link is handled explicitly.
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                // Check if the link is on the current page (starts with # and not "index.html#")
+                if (this.getAttribute('href').startsWith('#')) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+                // Close mobile menu if open after clicking a link
+                const navbar = document.getElementById('navbar');
+                const hamburger = document.getElementById('hamburger');
+                if (navbar.classList.contains('active')) {
+                    navbar.classList.remove('active');
+                    hamburger.classList.remove('active');
+                    document.querySelectorAll('.nav-list .dropdown.active').forEach(dropdown => {
+                        dropdown.classList.remove('active');
+                    });
+                }
             });
         });
 
-        // Intersection Observer for animations
+        // Add loading animation for cards
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry, index) => {
                 if (entry.isIntersecting) {
@@ -758,27 +1101,92 @@
             observer.observe(card);
         });
 
-        // Progress tracking simulation
-        let completedModules = 0;
-        document.querySelectorAll('.card-button').forEach(button => {
-            button.addEventListener('click', function() {
-                completedModules++;
-                const progressFill = document.querySelector('.progress-fill');
-                const totalModules = document.querySelectorAll('.card').length;
-                const progressPercentage = (completedModules / totalModules) * 100;
-                progressFill.style.width = `${Math.min(progressPercentage, 100)}%`;
-                
-                if (completedModules === totalModules) {
-                    showNotification('Congratulations! You have completed all GS1 modules!');
+        // Hamburger menu functionality - controls the entire navbar
+        const hamburger = document.getElementById('hamburger');
+        const navbar = document.getElementById('navbar');
+
+        hamburger.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+            hamburger.classList.toggle('active');
+            document.querySelectorAll('.nav-list .dropdown.active').forEach(dropdown => {
+                dropdown.classList.remove('active');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (event) => {
+            if (!navbar.contains(event.target) && !hamburger.contains(event.target)) {
+                if (navbar.classList.contains('active')) {
+                    navbar.classList.remove('active');
+                    hamburger.classList.remove('active');
+                    document.querySelectorAll('.nav-list .dropdown.active').forEach(dropdown => {
+                        dropdown.classList.remove('active');
+                    });
+                }
+            }
+        });
+
+        // Adjust card hover effect
+        document.querySelectorAll('.card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                if (this.style.opacity === '1') {
+                    this.style.transform = 'translateY(-15px) scale(1.02)';
+                }
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                if (this.style.opacity === '1') {
+                    this.style.transform = 'translateY(0) scale(1)';
                 }
             });
         });
 
-        // Dynamic background color changes based on scroll
+        // Dropdown functionality for mobile (click to toggle)
+        document.querySelectorAll('.dropdown > .dropbtn').forEach(dropbtn => {
+            dropbtn.addEventListener('click', function(event) {
+                if (window.innerWidth <= 768) {
+                    event.preventDefault();
+                    const parentLi = this.closest('.dropdown');
+                    parentLi.parentNode.querySelectorAll('.dropdown.active').forEach(openDropdown => {
+                        if (openDropdown !== parentLi) {
+                            openDropdown.classList.remove('active');
+                        }
+                    });
+                    parentLi.classList.toggle('active');
+                }
+            });
+        });
+
+        // NEW: Header collapse on scroll functionality
+        const header = document.querySelector('.header');
+        const scrollThreshold = 50; // Pixels scrolled before header collapses
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > scrollThreshold) {
+                header.classList.add('header-scrolled');
+            } else {
+                header.classList.remove('header-scrolled');
+            }
+        });
+
+        // Initial check on page load in case user refreshed while scrolled down
+        if (window.scrollY > scrollThreshold) {
+            header.classList.add('header-scrolled');
+        }
+
+        // Progress tracking simulation - (kept original, but modified as no progress bar is visible)
+        // The original progress bar logic was for the main page, not specific to GS1.
+        // Removing the progress bar elements from HTML and its related JS for simplicity
+        // as they don't seem to have a direct use case on this specific subject page.
+        // If you want to track progress within GS1, that would require a more complex implementation.
+
+        // Dynamic background color changes based on scroll - (kept, but might conflict with fixed header if not careful)
+        // This effect can be intense. Consider removing or softening if it interferes with readability.
         window.addEventListener('scroll', () => {
             const scrollPercent = window.scrollY / (document.documentElement.scrollHeight - window.innerHeight);
             const hue = scrollPercent * 360;
-            document.body.style.filter = `hue-rotate(${hue}deg)`;
+            // Removed direct body filter as it might affect header, keeping for potential alternative use
+            // document.body.style.filter = `hue-rotate(${hue}deg)`;
         });
     </script>
 </body>
