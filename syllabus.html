@@ -1,0 +1,1526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPSC History, Indian Culture, Polity, Environment, and Geography Syllabus 2026-27</title>
+    <style>body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7fa;
+    color: #222;
+}
+
+header {
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ce79);
+    background-size: 400% 400%;
+    color: white;
+    text-align: center;
+    padding: 3rem 1rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 800;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+    letter-spacing: 1px;
+}
+
+header .accent-line {
+    width: 150px;
+    height: 6px;
+    background: linear-gradient(90deg, #ffffff, #ffd700);
+    margin: 0.7rem auto;
+    border-radius: 4px;
+    opacity: 0.9;
+}
+
+header p {
+    margin: 0.4rem 0;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+    background-color: #1f2937;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1.5rem;
+    font-weight: 600;
+    transition: color 0.3s ease-in-out, transform 0.3s ease;
+}
+
+nav a:hover {
+    color: #f97316;
+    transform: scale(1.1);
+}
+
+.container {
+    max-width: 1600px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background: linear-gradient(145deg, #ffffff, #e5e7eb);
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+    border: 1px solid #d1d5db;
+    width: 100%;
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(145deg, #fef3c7, #fde68a);
+}
+
+.card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background: #f97316;
+    transition: width 0.3s ease;
+}
+
+.card:hover::after {
+    width: 100%;
+}
+
+.card-header {
+    background: linear-gradient(90deg, #1e3a8a, #2563eb);
+    color: white;
+    padding: 1.2rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    transition: background 0.3s ease;
+}
+
+.card:hover .card-header {
+    background: linear-gradient(90deg, #7c3aed, #a855f7);
+}
+
+.card-header:not(#world .card-header, #internal-security .card-header)::before {
+    content: 'Pre & Mains';
+    position: absolute;
+    top: 0;
+    right: 10px;
+    background: linear-gradient(45deg, #ff6b6b, #f97316);
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.3rem 0.6rem;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    animation: pulse 2s ease-in-out infinite;
+    transform-origin: top right;
+}
+
+#world .card-header::before, #internal-security .card-header::before {
+    content: 'Mains';
+    position: absolute;
+    top: 0;
+    right: 10px;
+    background: linear-gradient(45deg, #10b981, #34d399);
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.3rem 0.6rem;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    animation: pulse 2s ease-in-out infinite;
+    transform-origin: top right;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.card-content {
+    padding: 1.8rem;
+    max-height: 420px;
+    overflow-y: auto;
+    background: #ffffff;
+    transition: background 0.3s ease;
+}
+
+.card:hover .card-content {
+    background: #fff7ed;
+}
+
+.card-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+.card-content ul li {
+    margin: 0.6rem 0;
+    position: relative;
+    padding-left: 1.8rem;
+    transition: color 0.3s ease;
+}
+
+.card-content ul li:hover {
+    color: #7c3aed;
+}
+
+.card-content ul li::before {
+    content: "\2022";
+    position: absolute;
+    left: 0;
+    color: #f97316;
+    font-size: 1.2rem;
+}
+
+.card-content ul ul {
+    list-style-type: decimal;
+    padding-left: 2.2rem;
+}
+
+.card-content ul ul li::before {
+    content: none;
+}
+
+.card-content h3 {
+    color: #1f2937;
+    margin-top: 1.2rem;
+    font-size: 1.3rem;
+    transition: color 0.3s ease;
+}
+
+.card:hover .card-content h3 {
+    color: #7c3aed;
+}
+
+footer {
+    background-color: #1f2937;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+footer a {
+    color: #f97316;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #fef3c7;
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .card {
+        max-width: 380px;
+    }
+
+    nav a {
+        margin: 0 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .card-header {
+        font-size: 1.4rem;
+    }
+
+    .card-header:not(#world .card-header, #internal-security .card-header)::before,
+    #world .card-header::before, #internal-security .card-header::before {
+        font-size: 0.7rem;
+        padding: 0.2rem 0.5rem;
+        right: 8px;
+    }
+
+    .card-content {
+        padding: 1.5rem;
+        max-height: 380px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        grid-template-columns: 1fr;
+        padding: 0 0.5rem;
+    }
+
+    .card {
+        max-width: 100%;
+        margin: 0 0.5rem;
+        border-radius: 10px;
+    }
+
+    nav {
+        padding: 0.8rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        margin: 0.3rem 0.5rem;
+        font-size: 0.85rem;
+        padding: 0.3rem 0.5rem;
+        border-radius: 5px;
+        transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    nav a:hover {
+        background: rgba(249, 115, 22, 0.2);
+        transform: scale(1.05);
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header p {
+        font-size: 0.9rem;
+    }
+
+    .card-header {
+        font-size: 1.3rem;
+        padding: 1rem;
+    }
+
+    .card-header:not(#world .card-header, #internal-security .card-header)::before,
+    #world .card-header::before, #internal-security .card-header::before {
+        font-size: 0.65rem;
+        padding: 0.2rem 0.4rem;
+        right: 6px;
+    }
+
+    .card-content {
+        padding: 1.2rem;
+        max-height: 350px;
+    }
+
+    .card-content ul li {
+        padding-left: 1.5rem;
+    }
+
+    .card-content ul ul {
+        padding-left: 1.8rem;
+    }
+
+    .card:hover {
+        transform: scale(1.03);
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>📖 UPSC Syllabus 2026-27 For Prelims and Mains</h1>
+        <div class="accent-line"></div>
+        <p>GSSCORE: An Institute for Civil Services</p>
+        <p>Your First Step Towards IAS Success</p>
+    </header>
+
+    <nav>
+        <a href="#ancient">📜 Ancient History</a>
+        <a href="#medieval">📜 Medieval History</a>
+        <a href="#modern">📜 Modern History</a>
+        <a href="#post-independence">📜 Post-Independence</a>
+        <a href="#world">📜 World History</a>
+        <a href="#indian-culture">📜 Indian Culture</a>
+        <a href="#polity">📜 Polity</a>
+        <a href="#environment">📜 Environment and Ecology</a>
+        <a href="#geography">📜 Geography</a>
+    </nav>
+
+    <div class="container">
+        <!-- Ancient History Card -->
+        <div class="card" id="ancient">
+            <div class="card-header">🏺 Ancient History</div>
+            <div class="card-content">
+                <ul>
+                    <li><strong>Pre-Historic Cultures in India</strong>
+                        <ul>
+                            <li>Sources of Pre-History: Archaeological findings, tools, pottery</li>
+                            <li>Periodization: Stone Age divisions, cultural evolution</li>
+                            <li>Palaeolithic (2 million BC–10,000 BC): Hunting-gathering, early tools</li>
+                            <li>Mesolithic (10,000 BC–8,000 BC): Microliths, semi-sedentary life</li>
+                            <li>Neolithic (8,000 BC–4,000 BC): Agriculture, domestication, pottery</li>
+                            <li>Chalcolithic Age (4,000 BC–1,500 BC): Copper tools, village settlements</li>
+                            <li>Iron Age (1,500 BC–200 BC): Iron tools, agricultural surplus</li>
+                            <li>Impact of Iron: Urbanization, societal complexity</li>
+                        </ul>
+                    </li>
+                    <li><strong>Pastoral & Farming Communities</strong>
+                        <ul>
+                            <li>Neolithic Phase: Early farming, Mehrgarh evidence</li>
+                            <li>Chalcolithic Phase: Jorwe, Ahar cultures, rural settlements</li>
+                            <li>Early Iron Phase: Painted Grey Ware, agrarian expansion</li>
+                            <li>Geographical Distribution: Regional variations, river valleys</li>
+                        </ul>
+                    </li>
+                    <li><strong>Indus Valley Civilization</strong>
+                        <ul>
+                            <li>Major Cities: Harappa, Mohenjo-Daro, Lothal, Dholavira</li>
+                            <li>Town Planning: Grid layout, drainage, Great Bath</li>
+                            <li>Trade: Internal (beads, cotton), foreign (Mesopotamia)</li>
+                            <li>Agriculture: Wheat, barley, cotton cultivation</li>
+                            <li>Domestication: Cattle, buffalo, goats</li>
+                            <li>Crafts: Seals, pottery, bronze work</li>
+                            <li>Weights and Measures: Standardized system</li>
+                            <li>Script: Undeciphered, pictographic</li>
+                            <li>Society: Egalitarian, urbanized</li>
+                            <li>Religion: Pashupati seal, mother goddess worship</li>
+                            <li>Economy: Agrarian base, trade-driven</li>
+                            <li>Burial Systems: Varied practices, grave goods</li>
+                            <li>Art & Architecture: Seals, figurines, terracotta</li>
+                            <li>Decline: Climate change, river shifts, trade collapse</li>
+                        </ul>
+                    </li>
+                    <li><strong>Vedic Society</strong>
+                        <ul>
+                            <li>Original Home of Aryans: Central Asia hypothesis</li>
+                            <li>Aryan Culture: Pastoral, tribal organization</li>
+                            <li>Vedic Texts: Rigveda, Upanishads------------------</li>
+                            <li>Sources: Literary (Vedas), archaeological (PGW)</li>
+                            <li>Geography: Rig Vedic (South Asia), Later Vedic (Ganges Plain)</li>
+                            <li>Economy: Cattle rearing, early agriculture</li>
+                            <li>Political Organization: Tribal assemblies, monarchies</li>
+                            <li>Social System: Emergence of caste system</li>
+                            <li>Religion: Rituals, nature worship, early philosophy</li>
+                        </ul>
+                    </li>
+                    <li><strong>Pre-Mauryan Period</strong>
+                        <ul>
+                            <li>Second Urbanization: Iron tools, trade expansion</li>
+                            <li>State Formation: Rise of kingdoms, republics</li>
+                            <li>Mahajanapadas: Magadha, Kosala, Vrijji</li>
+                            <li>Republican States: Licchavis, Mallas</li>
+                            <li>Urban Centers: Rajgir, Varanasi</li>
+                            <li>Coins: Silver punch-marked coins</li>
+                            <li>Haryanka Dynasty: Bimbisara’s conquests</li>
+                            <li>Shishunaga Dynasty: Administrative reforms</li>
+                            <li>Nanda Dynasty: Military and economic power</li>
+                        </ul>
+                    </li>
+                    <li><strong>Jainism & Buddhism</strong>
+                        <ul>
+                            <li>Jainism: Mahavira’s teachings, asceticism</li>
+                            <li>Buddhism: Buddha’s life, Eightfold Path</li>
+                            <li>Spread: Royal patronage, trade routes</li>
+                            <li>Impact: Social change, ethical philosophies</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Medieval History Card -->
+        <div class="card" id="medieval">
+            <div class="card-header">🕌 Medieval History</div>
+            <div class="card-content">
+                <ul>
+                    <li><strong>Mauryan Empire</strong>
+                        <ul>
+                            <li>Chandragupta Maurya: Unification, Seleucid treaty</li>
+                            <li>Bindusara: Expansion, Deccan campaigns</li>
+                            <li>Arthashastra: Kautilya’s governance principles</li>
+                            <li>Megasthenes: Indica, foreign accounts</li>
+                            <li>Ashoka: Kalinga war, conversion to Buddhism</li>
+                            <li>Ashoka’s Inscriptions: Edicts, dhamma propagation</li>
+                            <li>Dhamma: Ethical governance, non-violence</li>
+                            <li>Administration: Centralized, provincial divisions</li>
+                            <li>Decline: Weak successors, economic strain</li>
+                        </ul>
+                    </li>
+                    <li><strong>Post-Mauryan India (200 BC–300 AD)</strong>
+                        <ul>
+                            <li>Indo-Greeks, Shakas, Kushanas: Cultural synthesis</li>
+                            <li>Trade: Silk Route, Roman contacts</li>
+                            <li>Satavahanas: Deccan rulers, trade hubs</li>
+                            <li>Society: Jati system, social stratification</li>
+                            <li>Sangam Literature: Tamil culture, polity</li>
+                            <li>Art Schools: Gandhara (Greco-Buddhist), Mathura, Amravati</li>
+                        </ul>
+                    </li>
+                    <li><strong>Gupta Empire</strong>
+                        <ul>
+                            <li>Sources: Inscriptions, Fa-Hien’s accounts</li>
+                            <li>Political History: Chandragupta I, Samudragupta</li>
+                            <li>Administration: Decentralized, feudal elements</li>
+                            <li>Golden Age: Art, science, literature</li>
+                            <li>Economy: Agriculture, trade prosperity</li>
+                            <li>Urban Centers: Pataliputra, Ujjain</li>
+                            <li>Society: Varna reinforcement, women’s status</li>
+                        </ul>
+                    </li>
+                    <li><strong>Harshavardhana</strong>
+                        <ul>
+                            <li>Sources: Harshacharita, Xuanzang’s accounts</li>
+                            <li>Administration: Feudal, benevolent rule</li>
+                            <li>Economy: Land grants, trade decline</li>
+                            <li>Society: Caste rigidity, Buddhist influence</li>
+                            <li>Religion: Buddhism, Hinduism coexistence</li>
+                        </ul>
+                    </li>
+                    <li><strong>South Indian Dynasties</strong>
+                        <ul>
+                            <li>Cholas: Rajaraja I, naval power</li>
+                            <li>Cheras, Pandyas: Maritime trade</li>
+                            <li>Sangam Period: Literature, polity</li>
+                            <li>Economy: Agriculture, trade with SE Asia</li>
+                            <li>Art: Dravidian temples, bronze sculptures</li>
+                        </ul>
+                    </li>
+                    <li><strong>Early Medieval Dynasties (750–1200)</strong>
+                        <ul>
+                            <li>Pratiharas: Arab resistance, Kanauj control</li>
+                            <li>Palas: Buddhist patronage, Nalanda</li>
+                            <li>Rashtrakutas: Ellora, Deccan dominance</li>
+                            <li>Tripartite Struggle: Kanauj contest</li>
+                            <li>Feudalism: Land grants, hierarchy</li>
+                            <li>Economy: Trade decline, agrarian focus</li>
+                        </ul>
+                    </li>
+                    <li><strong>Delhi Sultanate (1206–1526)</strong>
+                        <ul>
+                            <li>Slave Dynasty: Qutbuddin Aibak, Iltutmish</li>
+                            <li>Khalji Dynasty: Alauddin’s reforms</li>
+                            <li>Tughlaq Dynasty: Muhammad bin Tughlaq’s experiments</li>
+                            <li>Administration: Iqta system, centralization</li>
+                            <li>Economy: Market reforms, taxation</li>
+                            <li>Society: Syncretism, Sufi influence</li>
+                            <li>Decline: Timur’s invasion, weak rulers</li>
+                        </ul>
+                    </li>
+                    <li><strong>Vijayanagar Empire</strong>
+                        <ul>
+                            <li>Political History: Harihara, Bukka, Krishnadevaraya</li>
+                            <li>Administration: Nayaka system, efficient</li>
+                            <li>Economy: Trade, irrigation networks</li>
+                            <li>Culture: Telugu literature, Hampi architecture</li>
+                            <li>Conflicts: Bahmani rivalry</li>
+                        </ul>
+                    </li>
+                    <li><strong>Mughal Empire</strong>
+                        <ul>
+                            <li>Babur: Panipat, Timurid legacy</li>
+                            <li>Humayun: Sur interregnum</li>
+                            <li>Akbar: Rajput policy, Din-i-Ilahi</li>
+                            <li>Administration: Mansabdari, zabt system</li>
+                            <li>Aurangzeb: Deccan campaigns, religious policies</li>
+                            <li>Decline: Maratha rise, jagirdari crisis</li>
+                        </ul>
+                    </li>
+                    <li><strong>Marathas</strong>
+                        <ul>
+                            <li>Shivaji: Swarajya, guerrilla tactics</li>
+                            <li>Administration: Ashta Pradhan, forts</li>
+                            <li>Expansion: Peshwas, Panipat defeat</li>
+                            <li>Legacy: Regional power, anti-Mughal</li>
+                        </ul>
+                    </li>
+                    <li><strong>Society and Economy</strong>
+                        <ul>
+                            <li>Rural Society: Villages, zamindars</li>
+                            <li>Urban Life: Trade hubs, artisans</li>
+                            <li>Trade: Inland, maritime, European entry</li>
+                            <li>Art: Mughal painting, Deccani architecture</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Modern History Card -->
+        <div class="card" id="modern">
+            <div class="card-header">⏳ Modern History</div>
+            <div class="card-content">
+                <ul>
+                    <li><strong>Pre-1857 Scenario</strong>
+                        <ul>
+                            <li>Later Mughals: Decline, regional powers</li>
+                            <li>European Arrival: Portuguese, Dutch, British</li>
+                            <li>British Conquest: Plassey (1757), Buxar (1764)</li>
+                            <li>Carnatic Wars: Anglo-French rivalry</li>
+                            <li>Anglo-Mysore Wars: Haider Ali, Tipu Sultan</li>
+                            <li>Anglo-Maratha Wars: Peshwa decline</li>
+                            <li>Economic Policies: Drain of wealth, deindustrialization</li>
+                        </ul>
+                    </li>
+                    <li><strong>Revolt of 1857</strong>
+                        <ul>
+                            <li>Causes: Economic, social, military grievances</li>
+                            <li>Leaders: Rani Lakshmibai, Nana Saheb, Bahadur Shah</li>
+                            <li>Suppression: British military response</li>
+                            <li>Nature: Sepoy mutiny vs. first war of independence</li>
+                            <li>Consequences: End of Company rule, Crown control</li>
+                        </ul>
+                    </li>
+                    <li><strong>Early Nationalism</strong>
+                        <ul>
+                            <li>Pre-Congress Bodies: Bombay Association, Poona Sarvajanik Sabha</li>
+                            <li>Indian National Congress: 1885, moderate phase</li>
+                            <li>Swadeshi Movement: Partition of Bengal, boycott</li>
+                            <li>Government of India Act 1909: Morley-Minto reforms</li>
+                            <li>Home Rule Leagues: Tilak, Annie Besant</li>
+                        </ul>
+                    </li>
+                    <li><strong>Gandhian Era</strong>
+                        <ul>
+                            <li>Non-Cooperation Movement: Khilafat alliance, 1920–22</li>
+                            <li>Swaraj Party: CR Das, Motilal Nehru</li>
+                            <li>Simon Commission: Boycott, Lahore session</li>
+                            <li>Civil Disobedience Movement: Dandi Salt March, 1930</li>
+                            <li>Round Table Conferences: Gandhi-Irwin Pact</li>
+                            <li>Poona Pact: Ambedkar-Gandhi agreement</li>
+                            <li>Government of India Act 1935: Provincial autonomy</li>
+                        </ul>
+                    </li>
+                    <li><strong>Towards Independence</strong>
+                        <ul>
+                            <li>Quit India Movement: 1942, mass protests</li>
+                            <li>Cabinet Mission: Federal plan, interim government</li>
+                            <li>Mountbatten Plan: Partition, independence</li>
+                            <li>Communalism: Muslim League, Hindu Mahasabha</li>
+                        </ul>
+                    </li>
+                    <li><strong>Social Movements</strong>
+                        <ul>
+                            <li>Renaissance: Brahmo Samaj, Arya Samaj</li>
+                            <li>Tribal Movements: Santhal, Munda rebellions</li>
+                            <li>Peasant Movements: Champaran, Kheda</li>
+                            <li>Women’s Role: Sarojini Naidu, freedom struggle</li>
+                            <li>Press: Vernacular newspapers, nationalist ideas</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Post-Independence Indian History Card -->
+        <div class="card" id="post-independence">
+            <div class="card-header">🇮🇳 Post-Independence</div>
+            <div class="card-content">
+                <ul>
+                    <li><strong>State Reorganization & Integration</strong>
+                        <ul>
+                            <li>Constitutional Provisions: Article 3, state formation</li>
+                            <li>Princely States: Accession, Patel’s diplomacy</li>
+                            <li>Challenges: J&K, Hyderabad, Junagadh</li>
+                            <li>Foreign Territories: Goa (1961), Pondicherry</li>
+                            <li>Sikkim: Merger in 1975</li>
+                            <li>Refugee Rehabilitation: Partition aftermath</li>
+                            <li>Regionalism: Linguistic states, SRC 1956</li>
+                        </ul>
+                    </li>
+                    <li><strong>Linguistic Regionalism</strong>
+                        <ul>
+                            <li>Constitution: 8th Schedule, language policy</li>
+                            <li>Regionalism: Anti-Hindi protests, Tamil Nadu</li>
+                            <li>Recent Issues: Hindi imposition debates</li>
+                        </ul>
+                    </li>
+                    <li><strong>Tribal Issues</strong>
+                        <ul>
+                            <li>Issues: Land alienation, displacement</li>
+                            <li>Policy: 5th Schedule, FRA 2006</li>
+                            <li>Integration: Education, economic upliftment</li>
+                        </ul>
+                    </li>
+                    <li><strong>Caste & Social Movements</strong>
+                        <ul>
+                            <li>Ambedkar: Dalit emancipation, Constitution</li>
+                            <li>Constitutional Safeguards: Reservations, SC/ST Acts</li>
+                            <li>Issues: Manual scavenging, caste violence</li>
+                            <li>Initiatives: Swachh Bharat, scholarships</li>
+                        </ul>
+                    </li>
+                    <li><strong>Communalism & Secularism</strong>
+                        <ul>
+                            <li>Secularism: Constitutional ethos, Article 25</li>
+                            <li>Communalism: Partition legacy, riots</li>
+                            <li>Consequences: Social cohesion challenges</li>
+                        </ul>
+                    </li>
+                    <li><strong>Linguistic Minorities</strong>
+                        <ul>
+                            <li>Issues: Education, cultural preservation</li>
+                            <li>Initiatives: Minority commissions, language academies</li>
+                        </ul>
+                    </li>
+                    <li><strong>Economic Development</strong>
+                        <ul>
+                            <li>Planning: Five-Year Plans, NITI Aayog</li>
+                            <li>Land Reforms: Zamindari abolition, tenancy laws</li>
+                            <li>Green Revolution: HYV seeds, irrigation</li>
+                            <li>Industry: Public sector, liberalization</li>
+                            <li>New Economic Policy: 1991 reforms, globalization</li>
+                        </ul>
+                    </li>
+                    <li><strong>Science & Technology</strong>
+                        <ul>
+                            <li>Policy: Space (ISRO), nuclear programs</li>
+                            <li>Pre-Reform: Self-reliance focus</li>
+                            <li>Post-Reform: IT boom, biotech</li>
+                            <li>Initiatives: Digital India, Skill India</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- World History Card -->
+        <div class="card" id="world">
+            <div class="card-header">🌐 World History</div>
+            <div class="card-content">
+                <ul>
+                    <li><strong>Modern Era Beginnings</strong>
+                        <ul>
+                            <li>Feudal Decline: Rise of trade, urban centers</li>
+                            <li>Renaissance: Humanism, art, science</li>
+                            <li>Reformation: Protestant movement, Luther</li>
+                            <li>Exploration: Columbus, Vasco da Gama</li>
+                            <li>English Revolution: Glorious Revolution, 1688</li>
+                        </ul>
+                    </li>
+                    <li><strong>French Revolution</strong>
+                        <ul>
+                            <li>Causes: Inequality, Enlightenment ideas</li>
+                            <li>Events: Bastille, Reign of Terror</li>
+                            <li>Napoleon: Reforms, continental system</li>
+                            <li>Impact: Nationalism, democratic ideals</li>
+                        </ul>
+                    </li>
+                    <li><strong>Nationalism in Europe</strong>
+                        <ul>
+                            <li>Nation-State: Post-Napoleonic era</li>
+                            <li>Italy: Cavour, Garibaldi unification</li>
+                            <li>Germany: Bismarck, 1871 unification</li>
+                        </ul>
+                    </li>
+                    <li><strong>Colonialism & Imperialism</strong>
+                        <ul>
+                            <li>Colonialism: Africa, Asia exploitation</li>
+                            <li>Imperialism: Scramble for Africa, 1870–1914</li>
+                            <li>Asia: British India, Opium Wars</li>
+                            <li>Analysis: Economic drain, cultural impact</li>
+                        </ul>
+                    </li>
+                    <li><strong>American History</strong>
+                        <ul>
+                            <li>Revolutionary War: 1775–83, independence</li>
+                            <li>Civil War: Slavery, Lincoln, 1861–65</li>
+                            <li>Global Impact: Democracy, anti-colonialism</li>
+                            <li>Influence: French Revolution inspiration</li>
+                        </ul>
+                    </li>
+                    <li><strong>World War I</strong>
+                        <ul>
+                            <li>Causes: Alliances, militarism, nationalism</li>
+                            <li>Events: Trench warfare, Treaty of Versailles</li>
+                            <li>Consequences: League of Nations, reparations</li>
+                        </ul>
+                    </li>
+                    <li><strong>Russian Revolution</strong>
+                        <ul>
+                            <li>Causes: Tsarist oppression, economic crisis</li>
+                            <li>Events: 1917, Bolshevik rise, Lenin</li>
+                            <li>Consequences: USSR, global communism</li>
+                        </ul>
+                    </li>
+                    <li><strong>Inter-War Period</strong>
+                        <ul>
+                            <li>Great Depression: Economic collapse, 1929</li>
+                            <li>Fascism: Mussolini’s Italy, Hitler’s Germany</li>
+                            <li>USSR: Stalin’s policies, industrialization</li>
+                        </ul>
+                    </li>
+                    <li><strong>World War II</strong>
+                        <ul>
+                            <li>Causes: Appeasement, Axis aggression</li>
+                            <li>Events: Blitzkrieg, Holocaust, Pacific War</li>
+                            <li>Aftermath: UN, decolonization</li>
+                        </ul>
+                    </li>
+                    <li><strong>Cold War</strong>
+                        <ul>
+                            <li>Origins: US-USSR rivalry, 1945</li>
+                            <li>Events: Cuban Missile Crisis, arms race</li>
+                            <li>Thaw: Détente post-1953</li>
+                        </ul>
+                    </li>
+                    <li><strong>Global Issues</strong>
+                        <ul>
+                            <li>Decolonization: Asia, Africa independence</li>
+                            <li>European Integration: EU formation</li>
+                            <li>Terrorism: Rise of global networks</li>
+                            <li>China: Economic rise, global influence</li>
+                        </ul>
+                    </li>
+                    <li><strong>Ideologies</strong>
+                        <ul>
+                            <li>Capitalism: Market economy, liberalism</li>
+                            <li>Communism: Marxist theory, state control</li>
+                            <li>Socialism: Welfare state, mixed economy</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Indian Culture Card -->
+        <div class="card" id="indian-culture">
+            <div class="card-header">🎨 Indian Culture</div>
+            <div class="card-content">
+                <ul>
+                    <li><strong>Sculpture</strong>
+                        <ul>
+                            <li>Harappan: Seals, dancing girl figurine</li>
+                            <li>Mauryan: Ashokan pillars, polished sandstone</li>
+                            <li>Post-Mauryan: Stupa railings, Sanchi</li>
+                            <li>Jain: Gomateshwara statue, Shravanabelagola</li>
+                            <li>Buddhist: Buddha images, Gandhara style</li>
+                            <li>Gupta: Sarnath Buddha, classical style</li>
+                            <li>Medieval: Khajuraho, Chola bronzes</li>
+                            <li>Modern: Revivalism, contemporary forms</li>
+                        </ul>
+                    </li>
+                    <li><strong>Architecture</strong>
+                        <ul>
+                            <li>Harappan: Planned cities, Great Bath</li>
+                            <li>Mauryan: Rock-cut caves, Barabar</li>
+                            <li>Gupta: Nagara temples, Deogarh</li>
+                            <li>Dravidian: Brihadeeswara, gopurams</li>
+                            <li>Vesara: Hoysala temples, star-shaped</li>
+                            <li>Indo-Islamic: Qutub Minar, Taj Mahal</li>
+                            <li>Colonial: Victoria Terminus, Lutyens’ Delhi</li>
+                        </ul>
+                    </li>
+                    <li><strong>Painting</strong>
+                        <ul>
+                            <li>Ajanta: Buddhist murals, cave art</li>
+                            <li>Mughal: Miniatures, Akbar’s atelier</li>
+                            <li>Rajput: Themes of love, Krishna</li>
+                            <li>Bengal School: Revivalism, Tagore</li>
+                            <li>Modern: Amrita Sher-Gil, MF Husain</li>
+                        </ul>
+                    </li>
+                    <li><strong>Music</strong>
+                        <ul>
+                            <li>Classical: Hindustani, Carnatic traditions</li>
+                            <li>Folk: Baul, Bhangra, Lavani</li>
+                            <li>Medieval: Bhakti-Sufi qawwalis</li>
+                            <li>Modern: Fusion, Bollywood influence</li>
+                        </ul>
+                    </li>
+                    <li><strong>Dance</strong>
+                        <ul>
+                            <li>Classical: Bharatanatyam, Kathak, Odissi</li>
+                            <li>Folk: Garba, Bihu, Chhau</li>
+                            <li>Evolution: Temple to stage performances</li>
+                        </ul>
+                    </li>
+                    <li><strong>Theatre</strong>
+                        <ul>
+                            <li>Classical: Sanskrit drama, Natyashastra</li>
+                            <li>Folk: Tamasha, Yakshagana</li>
+                            <li>Modern: IPTA, urban theatre</li>
+                        </ul>
+                    </li>
+                    <li><strong>Puppetry</strong>
+                        <ul>
+                            <li>Forms: String (Kathputli), shadow (Tholu Bommalata)</li>
+                            <li>Regions: Rajasthan, Andhra Pradesh</li>
+                            <li>Modern: Educational, cultural revival</li>
+                        </ul>
+                    </li>
+                    <li><strong>Indian Cinema</strong>
+                        <ul>
+                            <li>Early: Silent films, Dadasaheb Phalke</li>
+                            <li>Golden Age: Raj Kapoor, Satyajit Ray</li>
+                            <li>Modern: Bollywood, regional cinema</li>
+                        </ul>
+                    </li>
+                    <li><strong>Religions</strong>
+                        <ul>
+                            <li>Hinduism: Vedic roots, Bhakti movement</li>
+                            <li>Buddhism: Ashokan spread, Mahayana</li>
+                            <li>Jainism: Non-violence, tirthankaras</li>
+                            <li>Islam: Sufi influence, syncretism</li>
+                            <li>Sikhism: Guru Nanak, Khalsa</li>
+                        </ul>
+                    </li>
+                    <li><strong>Bhakti & Sufi Movements</strong>
+                        <ul>
+                            <li>Bhakti: Ramananda, Kabir, Mirabai</li>
+                            <li>Sufi: Chishti, Suhrawardi orders</li>
+                            <li>Impact: Social reform, syncretic culture</li>
+                        </ul>
+                    </li>
+                    <li><strong>Languages & Literature</strong>
+                        <ul>
+                            <li>Classical: Sanskrit, Tamil Sangam</li>
+                            <li>Medieval: Persian, Braj, Awadhi</li>
+                            <li>Modern: Hindi, Bengali, regional literature</li>
+                        </ul>
+                    </li>
+                    <li><strong>Contemporary Issues</strong>
+                        <ul>
+                            <li>Art Preservation: Museums, ASI efforts</li>
+                            <li>Cultural Heritage: UNESCO sites, tourism</li>
+                            <li>Globalization: Fusion arts, diaspora influence</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Polity Card -->
+        <div class="card" id="polity">
+            <div class="card-header">⚖️ Polity</div>
+            <div class="card-content">
+                <ul>
+                    <li><strong>Constitutional History</strong>
+                        <ul>
+                            <li>Company Rule: Regulating Act 1773, Charter Acts</li>
+                            <li>Crown Rule: Government of India Acts 1858, 1919</li>
+                            <li>Indian Councils Act 1909: Morley-Minto reforms</li>
+                            <li>Government of India Act 1935: Federal structure</li>
+                            <li>Constituent Assembly: Formation, objectives</li>
+                        </ul>
+                    </li>
+                    <li><strong>Constitutional Framework</strong>
+                        <ul>
+                            <li>Preamble: Values, objectives</li>
+                            <li>Sources: British, US, Irish constitutions</li>
+                            <li>Structure: Parts, schedules, articles</li>
+                            <li>Features: Federalism, parliamentary system</li>
+                        </ul>
+                    </li>
+                    <li><strong>Union & Territory</strong>
+                        <ul>
+                            <li>Article 1: India as a union of states</li>
+                            <li>State Reorganization: Linguistic, administrative</li>
+                            <li>Union Territories: Governance, special status</li>
+                        </ul>
+                    </li>
+                    <li><strong>Fundamental Rights</strong>
+                        <ul>
+                            <li>Right to Equality: Articles 14–18</li>
+                            <li>Right to Freedom: Articles 19–22</li>
+                            <li>Right against Exploitation: Articles 23–24</li>
+                            <li>Right to Religion: Articles 25–28</li>
+                            <li>Cultural & Educational Rights: Articles 29–30</li>
+                            <li>Right to Constitutional Remedies: Article 32</li>
+                        </ul>
+                    </li>
+                    <li><strong>Directive Principles of State Policy</strong>
+                        <ul>
+                            <li>Articles 36–51: Social, economic justice</li>
+                            <li>Examples: Free education, uniform civil code</li>
+                            <li>Non-Justiciable: Advisory role</li>
+                        </ul>
+                    </li>
+                    <li><strong>Fundamental Duties</strong>
+                        <ul>
+                            <li>Article 51A: Citizen responsibilities</li>
+                            <li>Examples: Respect Constitution, promote harmony</li>
+                            <li>Significance: Civic consciousness</li>
+                        </ul>
+                    </li>
+                    <li><strong>System of Government</strong>
+                        <ul>
+                            <li>Parliamentary System: Executive accountability</li>
+                            <li>Federal Structure: Division of powers</li>
+                            <li>Amendment Process: Article 368, flexibility</li>
+                        </ul>
+                    </li>
+                    <li><strong>Union Executive</strong>
+                        <ul>
+                            <li>President: Powers, election, impeachment</li>
+                            <li>Prime Minister: Council of Ministers, role</li>
+                            <li>Cabinet: Decision-making, collective responsibility</li>
+                        </ul>
+                    </li>
+                    <li><strong>Union Legislature</strong>
+                        <ul>
+                            <li>Parliament: Lok Sabha, Rajya Sabha</li>
+                            <li>Legislative Process: Bills, budget</li>
+                            <li>Powers: Oversight, law-making</li>
+                        </ul>
+                    </li>
+                    <li><strong>State Executive</strong>
+                        <ul>
+                            <li>Governor: Appointment, powers</li>
+                            <li>Chief Minister: State council of ministers</li>
+                            <li>Role: State-level governance</li>
+                        </ul>
+                    </li>
+                    <li><strong>State Legislature</strong>
+                        <ul>
+                            <li>Structure: Vidhan Sabha, Vidhan Parishad</li>
+                            <li>Functions: Law-making, budget approval</li>
+                            <li>Relations: Union-state legislative ties</li>
+                        </ul>
+                    </li>
+                    <li><strong>Judiciary</strong>
+                        <ul>
+                            <li>Supreme Court: Independence, PILs</li>
+                            <li>High Courts: Jurisdiction, writs</li>
+                            <li>Judicial Review: Constitutional supremacy</li>
+                        </ul>
+                    </li>
+                    <li><strong>Local Governance</strong>
+                        <ul>
+                            <li>Panchayati Raj: 73rd Amendment, three-tier</li>
+                            <li>Urban Bodies: 74th Amendment, municipalities</li>
+                            <li>Significance: Decentralization, grassroots</li>
+                        </ul>
+                    </li>
+                    <li><strong>Constitutional Bodies</strong>
+                        <ul>
+                            <li>Election Commission: Free and fair elections</li>
+                            <li>UPSC: Civil services recruitment</li>
+                            <li>CAG: Financial audits, accountability</li>
+                            <li>Finance Commission: Fiscal federalism</li>
+                        </ul>
+                    </li>
+                    <li><strong>Non-Constitutional Bodies</strong>
+                        <ul>
+                            <li>NITI Aayog: Policy planning, cooperative federalism</li>
+                            <li>NHRC: Human rights protection</li>
+                            <li>CVC: Anti-corruption oversight</li>
+                        </ul>
+                    </li>
+                    <li><strong>Political Dynamics</strong>
+                        <ul>
+                            <li>Elections: Electoral reforms, EVMs</li>
+                            <li>Coalition Politics: Multi-party system</li>
+                            <li>Pressure Groups: Trade unions, NGOs</li>
+                        </ul>
+                    </li>
+                    <li><strong>Governance Issues</strong>
+                        <ul>
+                            <li>Transparency: RTI, e-governance</li>
+                            <li>Corruption: Lokpal, whistleblower laws</li>
+                            <li>Accountability: Citizen charters, audits</li>
+                        </ul>
+                    </li>
+                    <li><strong>Contemporary Issues</strong>
+                        <ul>
+                            <li>Federalism: GST, center-state tensions</li>
+                            <li>Judicial Activism: PILs, environmental cases</li>
+                            <li>Electoral Reforms: Funding, criminalization</li>
+                            <li>Digital Governance: Aadhaar, data privacy</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Environment and Ecology Card -->
+        <div class="card" id="environment">
+            <div class="card-header">🌿 Environment & Ecology</div>
+            <div class="card-content">
+                <ul>
+                    <li><strong>Basic Concepts</strong>
+                        <ul>
+                            <li>Environment: Definition, biotic and abiotic components, multidisciplinary scope, environmentalism</li>
+                            <li>Ecosystem: Types (forest, grassland, desert, aquatic), structure, energy flow, productivity</li>
+                            <li>Ecological Principles: Food chains, food webs, ecological pyramids, keystone species</li>
+                            <li>Biogeochemical Cycles: Carbon, nitrogen, phosphorus, water, oxygen cycles, human impacts</li>
+                            <li>Ecological Succession: Primary, secondary, autogenic vs. allogenic, sere stages</li>
+                            <li>Ecological Adaptations: Morphological, physiological, behavioral adaptations, examples (cacti, mangroves)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Biodiversity</strong>
+                        <ul>
+                            <li>Definition: Genetic, species, ecosystem diversity, alpha, beta, gamma diversity</li>
+                            <li>Biodiversity in India: 4 hotspots (Himalayas, Western Ghats, Indo-Burma, Sundaland), endemism</li>
+                            <li>Measurement: Species richness, evenness, diversity indices (Shannon, Simpson)</li>
+                            <li>Values: Direct (food, medicine), indirect (pollination, water purification), ethical</li>
+                            <li>Threats: Habitat fragmentation, invasive species (Lantana), overexploitation, pollution</li>
+                            <li>Conservation Strategies: In-situ (106 national parks, 573 sanctuaries, 18 biosphere reserves), ex-situ (seed banks, cryopreservation)</li>
+                            <li>Legislation: Wildlife Protection Act 1972, Biological Diversity Act 2002, rules and amendments</li>
+                            <li>International Conventions: CBD (Nagoya, Cartagena protocols), CITES, Ramsar (75 Indian sites), CMS</li>
+                        </ul>
+                    </li>
+                    <li><strong>Wildlife</strong>
+                        <ul>
+                            <li>Key Species: Tiger, Asiatic lion, Indian elephant, one-horned rhino, snow leopard, Ganges dolphin</li>
+                            <li>Conservation Programs: Project Tiger (1973, 54 reserves), Project Elephant (1992), Vulture Conservation</li>
+                            <li>Protected Areas: Biosphere reserves (Nilgiri, Sundarbans), community reserves, conservation reserves</li>
+                            <li>Issues: Poaching, illegal wildlife trade, habitat loss, human-wildlife conflict</li>
+                            <li>Man-Animal Conflicts: Causes (encroachment, corridor disruption), mitigation (early warning, fencing)</li>
+                            <li>IUCN Red List: Categories (CR, EN, VU), Indian species (gharial, great Indian bustard)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Pollution</strong>
+                        <ul>
+                            <li>Air Pollution: Primary pollutants (CO, SO2), secondary (ozone, smog), NAAQS, AQI categories</li>
+                            <li>Water Pollution: Sources (industrial effluents, sewage), parameters (DO, BOD, coliform), eutrophication</li>
+                            <li>Soil Pollution: Heavy metals (lead, cadmium), pesticides, land degradation, bioremediation</li>
+                            <li>Thermal Pollution: Causes (thermal plants, urban heat), effects on aquatic ecosystems</li>
+                            <li>Noise Pollution: Sources (construction, aviation), WHO guidelines, physiological impacts</li>
+                            <li>Light Pollution: Effects on wildlife, human health, astronomical observation</li>
+                            <li>Pollution Control: CPCB, SPCBs, NGT rulings, policies (Graded Response Action Plan, NCAP)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Climate Change</strong>
+                        <ul>
+                            <li>Causes: Greenhouse effect, anthropogenic sources (fossil fuels, agriculture), feedback loops</li>
+                            <li>Impacts: Temperature rise, sea level rise (1.4–5.8 mm/year), glacial melt, biodiversity loss</li>
+                            <li>Global Efforts: UNFCCC (1992), Kyoto Protocol (CDM), Paris Agreement (1.5°C target), COP 26–30</li>
+                            <li>India’s Initiatives: NAPCC (8 missions: Solar, Water, Green India), 500 GW renewables by 2030</li>
+                            <li>Mitigation: Afforestation, carbon capture, energy efficiency, low-carbon transport</li>
+                            <li>Adaptation: Climate-resilient agriculture, coastal defenses, urban planning</li>
+                        </ul>
+                    </li>
+                    <li><strong>Environmental Governance</strong>
+                        <ul>
+                            <li>Institutions: MoEFCC, CPCB, SPCBs, Wildlife Crime Control Bureau, NGT</li>
+                            <li>Legislation: Environment Protection Act 1986, Forest Conservation Act 1980, Air Act 1981, Water Cess Act</li>
+                            <li>International Bodies: UNEP, IPCC, World Bank’s GEF, Montreal Protocol</li>
+                            <li>EIA: Notification 2006, screening, scoping, public consultation, appraisal</li>
+                            <li>Landmark Judgments: MC Mehta cases (CNG, Ganga), Vellore Citizen’s Welfare Forum</li>
+                            <li>Schemes: National Mission for Clean Ganga, Compensatory Afforestation, Eco-Sensitive Zones</li>
+                        </ul>
+                    </li>
+                    <li><strong>Sustainable Development</strong>
+                        <ul>
+                            <li>Concept: Intergenerational equity, WCED 1987, pillars (economic, social, environmental)</li>
+                            <li>SDGs: 169 targets, relevance to India (Goal 6: Water, Goal 7: Energy, Goal 13: Climate)</li>
+                            <li>India’s Efforts: PM Suryodaya Yojana, Jal Jeevan Mission, UJALA, green buildings</li>
+                            <li>Green Technologies: Biofuels, green hydrogen, waste-to-energy, Li-ion batteries</li>
+                            <li>Challenges: Overpopulation, industrialization, land use conflicts, poverty</li>
+                            <li>Sustainable Practices: Organic farming, zero-waste, sustainable tourism</li>
+                        </ul>
+                    </li>
+                    <li><strong>Contemporary Issues</strong>
+                        <ul>
+                            <li>Plastic Pollution: Single-use plastic ban (2022), microplastics, marine debris</li>
+                            <li>Urban Ecology: Wetland restoration (Chilika, Loktak), urban heat islands, green roofs</li>
+                            <li>Climate Finance: Green Climate Fund, India’s climate budget, adaptation funding gaps</li>
+                            <li>Indigenous Knowledge: Tribal practices, sacred groves, traditional water harvesting</li>
+                            <li>Global Concerns: Polar ice melt, deforestation (Amazon, Congo), desert locust outbreaks</li>
+                            <li>Emerging Issues: E-waste management, nano-pollution, GMOs in agriculture</li>
+                            <li>International Cooperation: Belt and Road Initiative’s green push, SAARC environmental efforts</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+<!-- Internal Security Card -->
+<div class="card" id="internal-security">
+    <div class="card-header">🛡️ Internal Security</div>
+    <div class="card-content">
+        <ul>
+            <li><strong>Basic Concepts</strong>
+                <ul>
+                    <li>Definition: Internal security as protection of national sovereignty, territorial integrity, and citizen safety from internal threats</li>
+                    <li>Scope: Insurgency, terrorism, communal violence, cyber threats, border security</li>
+                    <li>Principles: Proactive prevention, intelligence-driven operations, multi-agency coordination</li>
+                    <li>Constitutional Provisions: Article 355 (Union’s duty to protect states), 7th Schedule (public order, police)</li>
+                    <li>National Security Doctrine: Comprehensive approach integrating military, economic, and social strategies</li>
+                </ul>
+            </li>
+            <li><strong>Linkages Between Development and Extremism</strong>
+                <ul>
+                    <li>Causes: Poverty, unemployment, regional disparities, lack of infrastructure</li>
+                    <li>Social Factors: Alienation of tribal and marginalized communities, caste and communal tensions</li>
+                    <li>Economic Impact: Reduced investment, disruption of local governance, increased militarization</li>
+                    <li>Case Studies: Naxalism in Chhattisgarh, separatism in Northeast</li>
+                    <li>Government Initiatives: Aspirational Districts Programme, Integrated Action Plan (IAP), Operation SAMADHAN</li>
+                </ul>
+            </li>
+            <li><strong>Insurgency and Naxalism</strong>
+                <ul>
+                    <li>Naxalism: Origins (1967 Naxalbari uprising), ideology (Maoism), spread (Red Corridor)</li>
+                    <li>Insurgency in Northeast: Ethnic conflicts, ULFA, NSCN, Manipur unrest</li>
+                    <li>Causes: Land alienation, resource exploitation, lack of political representation</li>
+                    <li>Counter-Measures: Security operations (Greyhounds, CoBRA), development schemes (Bharatmala, PM-DevINE)</li>
+                    <li>Challenges: Human rights concerns, collateral damage, local distrust</li>
+                </ul>
+            </li>
+            <li><strong>Terrorism</strong>
+                <ul>
+                    <li>Forms: Cross-border (J&K), homegrown (urban terrorism), lone-wolf attacks</li>
+                    <li>Key Groups: Lashkar-e-Taiba (LeT), Jaish-e-Mohammed (JeM), Indian Mujahideen</li>
+                    <li>Causes: Radicalization, external state support (Pakistan), social media propaganda</li>
+                    <li>Counter-Terrorism: Legislative (UAPA, NIA Act), operational (NSG, surgical strikes), international cooperation (FATF)</li>
+                    <li>Case Studies: 26/11 Mumbai attacks, Pulwama attack (2019)</li>
+                </ul>
+            </li>
+            <li><strong>Border Security</strong>
+                <ul>
+                    <li>Challenges: Porous borders (Indo-Pak, Indo-Bangladesh), cross-border infiltration, smuggling</li>
+                    <li>India-China Border: LAC disputes, Doklam (2017), Galwan (2020)</li>
+                    <li>Security Forces: BSF, ITBP, Assam Rifles, role and mandate</li>
+                    <li>Infrastructure: Border Area Development Programme (BADP), Border Infrastructure and Management (BIM) Scheme</li>
+                    <li>Technology: Comprehensive Integrated Border Management System (CIBMS), drones, smart fencing</li>
+                </ul>
+            </li>
+            <li><strong>Cyber Security</strong>
+                <ul>
+                    <li>Threats: Cyber-attacks (ransomware, phishing), data breaches, critical infrastructure targeting</li>
+                    <li>Actors: State-sponsored (China, North Korea), non-state (hacktivist groups), cybercriminals</li>
+                    <li>Legislation: IT Act 2000, National Cyber Security Policy 2013, Data Protection Act 2023</li>
+                    <li>Institutions: CERT-In, NCIIPC, Cyber Swachhta Kendra</li>
+                    <li>Challenges: Encryption misuse, dark web, skill shortage in cybersecurity</li>
+                    <li>International Cooperation: Budapest Convention, QUAD cyber framework</li>
+                </ul>
+            </li>
+            <li><strong>Role of Media and Social Media</strong>
+                <ul>
+                    <li>Positive Role: Awareness, public mobilization, counter-narratives to extremism</li>
+                    <li>Negative Role: Fake news, radicalization, amplification of communal tensions</li>
+                    <li>Case Studies: Role of WhatsApp in mob lynching, social media in 2020 Delhi riots</li>
+                    <li>Regulation: IT Rules 2021, Section 69A of IT Act, content moderation policies</li>
+                    <li>Challenges: Balancing free speech and security, monitoring encrypted platforms</li>
+                </ul>
+            </li>
+            <li><strong>Narco-Terrorism</strong>
+                <ul>
+                    <li>Definition: Use of drug trafficking to fund terrorism, destabilize governance</li>
+                    <li>Routes: Golden Crescent (Afghanistan-Pakistan), Golden Triangle (Myanmar-Thailand)</li>
+                    <li>Impact: Addiction, organized crime, funding for LeT, JeM</li>
+                    <li>Counter-Measures: NDPS Act 1985, NCB operations, international agreements (UNODC)</li>
+                    <li>Challenges: Cross-border smuggling, corruption, demand-side issues</li>
+                </ul>
+            </li>
+            <li><strong>Security Forces and Agencies</strong>
+                <ul>
+                    <li>Central Armed Police Forces: CRPF, BSF, ITBP, SSB, CISF, roles and deployments</li>
+                    <li>Specialized Agencies: NIA, NSG, RAW, IB, mandates and functions</li>
+                    <li>Military Role: Army in counter-insurgency (AFSPA), Rashtriya Rifles</li>
+                    <li>Reforms: Modernization, inter-agency coordination, capacity building</li>
+                    <li>Challenges: Overstretch, human rights allegations, resource constraints</li>
+                </ul>
+            </li>
+            <li><strong>Money Laundering and Organized Crime</strong>
+                <ul>
+                    <li>Money Laundering: Process (placement, layering, integration), PMLA 2002</li>
+                    <li>Organized Crime: Smuggling, human trafficking, arms trade</li>
+                    <li>Institutions: ED, FIU-IND, role in tracking illicit funds</li>
+                    <li>International Frameworks: FATF, Asia/Pacific Group on Money Laundering</li>
+                    <li>Challenges: Hawala networks, cryptocurrency misuse, judicial delays</li>
+                </ul>
+            </li>
+            <li><strong>Contemporary Issues</strong>
+                <ul>
+                    <li>Emerging Technologies: AI in surveillance, blockchain in crime, UAVs for smuggling</li>
+                    <li>Urban Security: Smart city vulnerabilities, crowd management, urban Naxalism</li>
+                    <li>Maritime Security: Piracy, illegal fishing, coastal security post-26/11</li>
+                    <li>Communal and Ethnic Violence: Triggers (religious processions, land disputes), mitigation (peace committees)</li>
+                    <li>Human Security: Migration, food security, health crises impacting internal stability</li>
+                    <li>Global Threats: Influence of ISIS, Al-Qaeda, transnational crime networks</li>
+                    <li>Government Initiatives: SAMADHAN, Vibrant Villages Programme, National Intelligence Grid (NATGRID)</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div><div class="card" id="economy">
+            <div class="card-header">💰 Economy</div>
+           
+            <div class="card-content">
+                <ul>
+                    <li>Basic Economic Concepts
+                        <ul>
+                            <li>Basic concepts of Economics</li>
+                            <li>Microeconomics vs Macroeconomics</li>
+                            <li>Positive vs Normative Economics</li>
+                            <li>Opportunity Cost</li>
+                            <li>Production Possibility Curve</li>
+                            <li>Types of Economies</li>
+                            <li>Demand and Supply</li>
+                            <li>Elasticity of Demand</li>
+                            <li>Market Structures</li>
+                            <li>National Income Accounting</li>
+                            <li>GDP, GNP, NDP, NNP</li>
+                            <li>Methods of Measuring National Income</li>
+                            <li>Nominal vs Real GDP</li>
+                            <li>GDP Deflator</li>
+                            <li>Per Capita Income</li>
+                        </ul>
+                    </li>
+                    <li>Money and Banking
+                        <ul>
+                            <li>Functions of Money</li>
+                            <li>Money Supply (M0, M1, M2, M3, M4)</li>
+                            <li>Reserve Bank of India (RBI) and its Functions</li>
+                            <li>Monetary Policy</li>
+                            <li>Repo Rate, Reverse Repo Rate, CRR, SLR</li>
+                            <li>Open Market Operations</li>
+                            <li>Quantitative vs Qualitative Credit Control</li>
+                            <li>Banking System in India</li>
+                            <li>Commercial Banks</li>
+                            <li>Cooperative Banks</li>
+                            <li>Regional Rural Banks</li>
+                            <li>Non-Banking Financial Companies (NBFCs)</li>
+                            <li>Development Financial Institutions</li>
+                            <li>Banking Sector Reforms</li>
+                            <li>Basel Norms</li>
+                            <li>Non-Performing Assets (NPAs)</li>
+                            <li>Insolvency and Bankruptcy Code</li>
+                            <li>Digital Banking and Financial Inclusion</li>
+                            <li>Payment Banks and Small Finance Banks</li>
+                            <li>Unified Payments Interface (UPI)</li>
+                            <li>Cryptocurrencies and Blockchain</li>
+                        </ul>
+                    </li>
+                    <li>Public Finance
+                        <ul>
+                            <li>Government Budgeting</li>
+                            <li>Revenue and Capital Expenditure</li>
+                            <li>Fiscal Deficit, Revenue Deficit, Primary Deficit</li>
+                            <li>Public Debt Management</li>
+                            <li>Taxation in India</li>
+                            <li>Direct and Indirect Taxes</li>
+                            <li>GST (Goods and Services Tax)</li>
+                            <li>Tax Reforms</li>
+                            <li>Public Expenditure</li>
+                            <li>Subsidies</li>
+                            <li>Fiscal Policy</li>
+                            <li>Fiscal Responsibility and Budget Management (FRBM) Act</li>
+                            <li>Finance Commission and its Role</li>
+                            <li>State Finances</li>
+                        </ul>
+                    </li>
+                    <li>Inflation
+                        <ul>
+                            <li>Types of Inflation</li>
+                            <li>Causes and Effects of Inflation</li>
+                            <li>Consumer Price Index (CPI)</li>
+                            <li>Wholesale Price Index (WPI)</li>
+                            <li>Inflation Targeting</li>
+                            <li>Monetary Policy Committee (MPC)</li>
+                            <li>Measures to Control Inflation</li>
+                        </ul>
+                    </li>
+                    <li>Indian Economy: Planning and Development
+                        <ul>
+                            <li>Economic Planning in India</li>
+                            <li>Five-Year Plans</li>
+                            <li>NITI Aayog and its Role</li>
+                            <li>Sustainable Development Goals (SDGs)</li>
+                            <li>Poverty and Unemployment</li>
+                            <li>Poverty Estimation Methods</li>
+                            <li>Types of Unemployment</li>
+                            <li>Government Schemes for Employment</li>
+                            <li>Human Development Index (HDI)</li>
+                            <li>Inequality and Inclusive Growth</li>
+                            <li>Rural and Urban Development</li>
+                            <li>Smart Cities Mission</li>
+                            <li>Make in India</li>
+                            <li>Atmanirbhar Bharat</li>
+                        </ul>
+                    </li>
+                    <li>External Sector
+                        <ul>
+                            <li>Balance of Payments</li>
+                            <li>Current Account and Capital Account</li>
+                            <li>Foreign Exchange Reserves</li>
+                            <li>Exchange Rate Regimes</li>
+                            <li>Rupee Depreciation and Appreciation</li>
+                            <li>Foreign Direct Investment (FDI)</li>
+                            <li>Foreign Portfolio Investment (FPI)</li>
+                            <li>External Commercial Borrowings (ECB)</li>
+                            <li>Trade Policy</li>
+                            <li>Export-Import (EXIM) Policy</li>
+                            <li>Free Trade Agreements (FTAs)</li>
+                            <li>World Trade Organization (WTO)</li>
+                            <li>Regional Comprehensive Economic Partnership (RCEP)</li>
+                            <li>Trade Deficit</li>
+                        </ul>
+                    </li>
+                    <li>Agriculture and Allied Sectors
+                        <ul>
+                            <li>Role of Agriculture in Indian Economy</li>
+                            <li>Agricultural Revolutions</li>
+                            <li>Green Revolution</li>
+                            <li>White Revolution</li>
+                            <li>Blue Revolution</li>
+                            <li>Land Reforms</li>
+                            <li>Agricultural Marketing</li>
+                            <li>e-NAM (National Agriculture Market)</li>
+                            <li>Minimum Support Price (MSP)</li>
+                            <li>Agricultural Credit and Insurance</li>
+                            <li>PM-KISAN Scheme</li>
+                            <li>Food Security</li>
+                            <li>Public Distribution System (PDS)</li>
+                            <li>National Food Security Act</li>
+                            <li>Agricultural Exports</li>
+                            <li>Organic Farming</li>
+                            <li>Climate-Smart Agriculture</li>
+                        </ul>
+                    </li>
+                    <li>Industry and Infrastructure
+                        <ul>
+                            <li>Industrial Policy</li>
+                            <li>Industrial Development since Independence</li>
+                            <li>Public Sector Enterprises</li>
+                            <li>Disinvestment</li>
+                            <li>Micro, Small, and Medium Enterprises (MSMEs)</li>
+                            <li>Startup India</li>
+                            <li>Infrastructure Development</li>
+                            <li>Bharatmala Project</li>
+                            <li>Sagarmala Project</li>
+                            <li>Railway Modernization</li>
+                            <li>National Infrastructure Pipeline (NIP)</li>
+                            <li>Digital Infrastructure</li>
+                            <li>5G and Telecom Sector</li>
+                            <li>Energy Sector</li>
+                            <li>Renewable Energy Initiatives</li>
+                        </ul>
+                    </li>
+                    <li>Services Sector
+                        <ul>
+                            <li>Role of Services in Indian Economy</li>
+                            <li>IT and ITeS Industry</li>
+                            <li>Tourism and Hospitality</li>
+                            <li>Healthcare Sector</li>
+                            <li>Education Sector</li>
+                            <li>Financial Services</li>
+                            <li>E-commerce</li>
+                            <li>Logistics and Supply Chain</li>
+                        </ul>
+                    </li>
+                    <li>Contemporary Economic Issues
+                        <ul>
+                            <li>Economic Impact of COVID-19</li>
+                            <li>Global Recession and India</li>
+                            <li>Supply Chain Disruptions</li>
+                            <li>Digital Economy</li>
+                            <li>Gig Economy</li>
+                            <li>Fintech Innovations</li>
+                            <li>Green Economy</li>
+                            <li>Circular Economy</li>
+                            <li>Black Money and Demonetization</li>
+                            <li>Parallel Economy</li>
+                            <li>Money Laundering</li>
+                            <li>Economic Reforms</li>
+                            <li>LPG Reforms (1991)</li>
+                            <li>Second Generation Reforms</li>
+                            <li>Globalization and its Impact</li>
+                            <li>India and Global Economic Institutions (IMF, World Bank, ADB)</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>        <!-- Geography Card -->
+        <div class="card" id="geography">
+            <div class="card-header">🗺️ Geography</div>
+            <div class="card-content">
+                <ul>
+                    <li><strong>Physical Geography</strong>
+                        <ul>
+                            <li>Geomorphology: Earth’s interior, plate tectonics, continental drift, earthquakes, volcanoes, weathering, mass wasting, landforms (mountains, plateaus, plains)</li>
+                            <li>Climatology: Atmosphere structure, solar radiation, heat budget, temperature inversion, pressure belts, wind systems, jet streams, monsoons, precipitation types, climate classification (Koeppen)</li>
+                            <li>Oceanography: Ocean floor topography, continental shelves, ocean currents, tides, El Niño, La Niña, coral reefs, marine ecosystems, salinity distribution</li>
+                            <li>Biogeography: Ecosystems, biomes (tundra, savanna), soil formation, soil types (zonal, azonal), biodiversity distribution, ecological pyramids</li>
+                            <li>Environmental Geography: Natural hazards (cyclones, tsunamis), climate change impacts, desertification, deforestation</li>
+                        </ul>
+                    </li>
+                    <li><strong>Human Geography</strong>
+                        <ul>
+                            <li>Population: World population distribution, density, growth trends, demographic transition model, migration (internal, international), population policies</li>
+                            <li>Settlements: Rural settlement patterns (nucleated, dispersed), urban morphology, urbanization trends, functional classification of cities, urban problems (slums, congestion)</li>
+                            <li>Economic Geography: Primary activities (agriculture, mining), secondary (manufacturing), tertiary (services), quaternary sectors, world trade patterns, globalization</li>
+                            <li>Cultural Geography: Languages, religions, ethnic diversity, cultural diffusion, human-environment interaction</li>
+                            <li>Political Geography: Nation-states, boundaries, geopolitics, international organizations (UN, ASEAN), resource conflicts</li>
+                            <li>Regional Planning: Concepts of region, growth poles, regional disparities, planning models (core-periphery), sustainable development</li>
+                        </ul>
+                    </li>
+                    <li><strong>Indian Geography</strong>
+                        <ul>
+                            <li>Physical Setting: Geological structure, physiographic divisions (Himalayas, Indo-Gangetic Plains, Peninsular Plateau, Coastal Plains), drainage systems (Himalayan vs. Peninsular rivers)</li>
+                            <li>Climate: Monsoon mechanism, seasonal variations, El Niño impact, rainfall distribution, climate regions</li>
+                            <li>Soils: Alluvial, black, red, laterite, desert soils; soil erosion, conservation measures</li>
+                            <li>Natural Vegetation: Tropical rainforests, deciduous forests, mangroves, alpine vegetation, forest conservation</li>
+                            <li>Resources: Land use patterns, water resources (rivers, groundwater), minerals (iron ore, coal, bauxite), energy (coal, oil, renewables), forest resources</li>
+                            <li>Agriculture: Cropping patterns, major crops (rice, wheat, pulses), irrigation systems, Green Revolution, agricultural productivity, challenges (land fragmentation, water scarcity)</li>
+                            <li>Industry: Industrial regions (Mumbai-Pune, Chota Nagpur), major industries (textiles, steel, IT), industrial policies, Make in India, SEZs</li>
+                            <li>Transport and Communication: Road networks (NHDP, Bharatmala), railways, ports (major vs. minor), airports, digital connectivity (BharatNet)</li>
+                            <li>Population and Settlements: Demographic profile, population density, urbanization trends, rural-urban migration, smart cities, slum rehabilitation</li>
+                            <li>Regional Development: Five-Year Plans, NITI Aayog, backward area development, regional imbalances, aspirational districts</li>
+                            <li>Political Aspects: Federal structure, state reorganization (1956, recent changes), interstate disputes (water, borders), geopolitical significance</li>
+                            <li>Environmental Issues: Deforestation, desertification, river pollution, urban air quality, coastal erosion</li>
+                        </ul>
+                    </li>
+                    <li><strong>World Geography</strong>
+                        <ul>
+                            <li>Major Physical Features: Himalayas, Andes, Sahara, Amazon Basin, Great Barrier Reef</li>
+                            <li>Climate Regions: Tropical, Mediterranean, polar, arid climates</li>
+                            <li>Resource Distribution: Oil (Middle East), rare earths (China), fisheries (North Atlantic), forests (Amazon, Siberia)</li>
+                            <li>Economic Regions: Developed (North America, EU) vs. developing (Africa, South Asia), global trade hubs</li>
+                            <li>Geopolitical Issues: Arctic resource race, South China Sea disputes, transboundary rivers</li>
+                            <li>Global Environmental Issues: Global warming, ozone depletion, biodiversity loss, marine pollution</li>
+                        </ul>
+                    </li>
+                    <li><strong>Contemporary Issues</strong>
+                        <ul>
+                            <li>Climate Change: Impacts on agriculture, sea level rise, extreme weather, India’s INDCs, mitigation strategies</li>
+                            <li>Natural Disasters: Floods, droughts, cyclones, earthquake-prone zones, disaster management (NDMA)</li>
+                            <li>Urbanization Challenges: Urban sprawl, water scarcity, air pollution, waste management, sustainable urban planning</li>
+                            <li>Resource Management: Water stress, renewable energy transition, land degradation, sustainable mining</li>
+                            <li>Geopolitical Conflicts: Transboundary water sharing (Indus, Brahmaputra), resource nationalism, maritime security</li>
+                            <li>Technological Interventions: GIS, remote sensing, climate modeling, smart agriculture</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+  
+</body>
+</html>
