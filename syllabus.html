@@ -4,75 +4,337 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UPSC History, Indian Culture, Polity, Environment, and Geography Syllabus 2026-27</title>
-    <style>body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f7fa;
-    color: #222;
-}
+    <style>
 
-header {
-    background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ce79);
-    background-size: 400% 400%;
-    color: white;
-    text-align: center;
-    padding: 3rem 1rem;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-    animation: gradientShift 15s ease infinite;
-}
 
-@keyframes gradientShift {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
+ /* Import Google Font for "CRACK UPSC" text */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
 
-header h1 {
-    margin: 0;
-    font-size: 3rem;
-    font-weight: 800;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
-    letter-spacing: 1px;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-header .accent-line {
-    width: 150px;
-    height: 6px;
-    background: linear-gradient(90deg, #ffffff, #ffd700);
-    margin: 0.7rem auto;
-    border-radius: 4px;
-    opacity: 0.9;
-}
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            min-height: 100vh;
+            padding-top: 90px; /* Space for the initial header height */
+        }
 
-header p {
-    margin: 0.4rem 0;
-    font-size: 1.2rem;
-    font-weight: 400;
-    color: #fff;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-}
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
 
-nav {
-    background-color: #1f2937;
-    padding: 1rem;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
+        /* HEADER STYLES */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: white;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            z-index: 1000;
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: #333;
+            transition: padding 0.3s ease, background-color 0.3s ease;
+        }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 1.5rem;
-    font-weight: 600;
-    transition: color 0.3s ease-in-out, transform 0.3s ease;
-}
+        .header.header-scrolled {
+            padding: 8px 20px;
+        }
 
-nav a:hover {
-    color: #f97316;
-    transform: scale(1.1);
-}
+        .header-content {
+            flex-shrink: 0;
+            margin-right: 10px;
+        }
+
+        .header-content h1 {
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size: 2rem;
+            margin: 0;
+            letter-spacing: 1px;
+            line-height: 1.2;
+            color: #333;
+            transition: font-size 0.3s ease;
+        }
+
+        .header.header-scrolled .header-content h1 {
+            font-size: 1.5rem;
+        }
+
+        .header-content p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-top: 4px;
+            color: #555;
+            transition: font-size 0.3s ease, opacity 0.3s ease;
+        }
+
+        .header.header-scrolled .header-content p {
+            font-size: 0.7rem;
+            opacity: 0.6;
+        }
+
+        /* NAVBAR STYLES */
+        .navbar {
+            width: auto;
+            padding: 0;
+        }
+
+        .nav-list {
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            padding: 0;
+            margin: 0;
+            align-items: center;
+        }
+
+        .nav-list li {
+            margin: 0 8px;
+            position: relative;
+        }
+
+        .nav-list a {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: background 0.3s ease, color 0.3s ease;
+            display: block;
+            touch-action: manipulation; /* Improve touch response */
+        }
+
+        .nav-list a:hover {
+            background: #f0f0f0;
+            color: #23a6d5;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background: white;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+            z-index: 10;
+            border-radius: 8px;
+            padding: 8px 0;
+            top: 100%;
+            left: 0;
+            list-style: none;
+        }
+
+        .dropdown-content a {
+            color: #333;
+            padding: 10px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            font-size: 0.9rem;
+            font-weight: normal;
+            border-radius: 0;
+        }
+
+        .dropdown-content a:hover {
+            background: #f1f1f1;
+            color: #23a6d5;
+        }
+
+        .nav-list li.dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* HAMBURGER MENU STYLES .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 8px;
+            z-index: 1001;
+            touch-action: manipulation;
+        }
+
+        .hamburger .bar {
+            width: 22px;
+            height: 3px;
+            background-color: #333;
+            margin: 3px 0;
+            transition: transform 0.4s, opacity 0.4s;
+        }
+
+        /* MEDIA QUERIES FOR MOBILE RESPONSIVENESS */
+        @media (max-width: 768px) {
+            body {
+                padding-top: 60px; /* Adjusted for mobile header height */
+            }
+
+            .header {
+                padding: 10px 15px;
+            }
+
+            .header.header-scrolled {
+                padding: 6px 15px;
+            }
+
+            .header-content h1 {
+                font-size: 1.6rem;
+            }
+
+            .header.header-scrolled .header-content h1 {
+                font-size: 1.3rem;
+            }
+
+            .header-content p {
+                display: none; /* Hide tagline on mobile */
+            }
+
+            .navbar {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: white;
+                box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+                display: none;
+                flex-direction: column;
+                border-radius: 0 0 8px 8px;
+                overflow: hidden;
+                max-height: 0;
+                transition: max-height 0.4s ease-out, opacity 0.4s ease-out;
+                opacity: 0;
+            }
+
+            .navbar.active {
+                display: flex;
+                max-height: 600px; /* Increased for more content */
+                opacity: 1;
+            }
+
+            .nav-list {
+                flex-direction: column;
+                width: 100%;
+                padding: 10px 0;
+                align-items: flex-start;
+            }
+
+            .nav-list li {
+                margin: 0;
+                width: 100%;
+                border-bottom: 1px solid rgba(0,0,0,0.05);
+            }
+
+            .nav-list li:last-child {
+                border-bottom: none;
+            }
+
+            .nav-list a {
+                padding: 12px 20px;
+                font-size: 1.1rem; /* Slightly larger for touch */
+            }
+
+            .nav-list a:hover {
+                background: #f0f0f0;
+            }
+
+            .nav-list li.dropdown .dropbtn .arrow {
+                transform: rotate(0deg);
+                transition: transform 0.3s ease;
+            }
+
+            .nav-list li.dropdown.active .dropbtn .arrow {
+                transform: rotate(180deg);
+            }
+
+            .dropdown-content {
+                display: none;
+                position: static;
+                width: 100%;
+                background: rgba(0,0,0,0.05);
+                box-shadow: none;
+                border-radius: 0;
+                padding: 0;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.4s ease-out;
+            }
+
+            .nav-list li.dropdown.active .dropdown-content {
+                display: block;
+                max-height: 300px;
+            }
+
+            .dropdown-content a {
+                padding: 10px 30px;
+                font-size: 1rem;
+                color: #555;
+            }
+
+            .dropdown-content a:hover {
+                background: rgba(0,0,0,0.1);
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .hamburger.active .bar:nth-child(1) {
+                transform: translateY(7px) rotate(45deg);
+            }
+
+            .hamburger.active .bar:nth-child(2) {
+                opacity: 0;
+            }
+
+            .hamburger.active .bar:nth-child(3) {
+                transform: translateY(-7px) rotate(-45deg);
+            }
+        }
+
+        /* Extra small devices (below 480px) */
+        @media (max-width: 480px) {
+            body {
+                padding-top: 50px;
+            }
+
+            .header {
+                padding: 8px 10px;
+            }
+
+            .header.header-scrolled {
+                padding: 5px 10px;
+            }
+
+            .header-content h1 {
+                font-size: 1.4rem;
+            }
+
+            .header.header-scrolled .header-content h1 {
+                font-size: 1.2rem;
+            }
+
+            .nav-list a {
+                font-size: 1rem;
+                padding: 10px 15px;
+            }
+
+            .dropdown-content a {
+                font-size: 0.9rem;
+                padding: 8px 25px;
+            }
+        }
+
 
 .container {
     max-width: 1600px;
@@ -362,25 +624,54 @@ html {
     </style>
 </head>
 <body>
-    <header>
-        <h1>📖 UPSC Syllabus 2026-27 For Prelims and Mains</h1>
-        <div class="accent-line"></div>
-        <p>GSSCORE: An Institute for Civil Services</p>
-        <p>Your First Step Towards IAS Success</p>
+   <header class="header">
+        <div class="header-content">
+            <h1>🏛️ CRACK UPSC</h1>
+            <p>Simplify. Strategize. Succeed.</p>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <nav class="navbar" id="navbar">
+            <ul class="nav-list">
+                <li><a href="#why-choose-us">Why Choose Us?</a></li>
+                <li class="dropdown">
+                    <a href="#prelims" class="dropbtn">Prelims <span class="arrow">▾</span></a>
+                    <ul class="dropdown-content">
+                        <li><a href="prelims-gs1.html">General Studies Paper 1</a></li>
+                        <li><a href="prelims-csat.html">CSAT - Paper 2</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#mains" class="dropbtn">Mains <span class="arrow">▾</span></a>
+                    <ul class="dropdown-content">
+                        <li><a href="mains-essay.html">Essay Paper</a></li>
+                        <li><a href="gs1.html">General Studies 1</a></li>
+                        <li><a href="gs2.html">General Studies 2</a></li>
+                        <li><a href="gs3.html">General Studies 3</a></li>
+                        <li><a href="gs4.html">General Studies 4</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#optional-subjects" class="dropbtn">Optionals <span class="arrow">▾</span></a>
+                    <ul class="dropdown-content">
+                        <li><a href="optional-pubad.html">Public Administration</a></li>
+                        <li><a href="optional-geo.html">Geography</a></li>
+                        <li><a href="optional-history.html">History</a></li>
+                        <li><a href="optional-others.html">Other Optionals</a></li>
+                    </ul>
+                </li>
+                <li><a href="#personality-test">Interview</a></li>
+                <li><a href="signup.html">Join Now</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <nav>
-        <a href="#ancient">📜 Ancient History</a>
-        <a href="#medieval">📜 Medieval History</a>
-        <a href="#modern">📜 Modern History</a>
-        <a href="#post-independence">📜 Post-Independence</a>
-        <a href="#world">📜 World History</a>
-        <a href="#indian-culture">📜 Indian Culture</a>
-        <a href="#polity">📜 Polity</a>
-        <a href="#environment">📜 Environment and Ecology</a>
-        <a href="#geography">📜 Geography</a>
-    </nav>
+  
 
+   
     <div class="container">
         <!-- Ancient History Card -->
         <div class="card" id="ancient">
@@ -1864,7 +2155,80 @@ html {
             </div>
         </div>
     </div>
+<script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
+                // Close mobile menu
+                const navbar = document.getElementById('navbar');
+                const hamburger = document.getElementById('hamburger');
+                if (navbar.classList.contains('active')) {
+                    navbar.classList.remove('active');
+                    hamburger.classList.remove('active');
+                    document.querySelectorAll('.nav-list .dropdown.active').forEach(dropdown => {
+                        dropdown.classList.remove('active');
+                    });
+                }
+            });
+        });
 
-  
+        // Hamburger menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const navbar = document.getElementById('navbar');
+
+        hamburger.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+            hamburger.classList.toggle('active');
+            document.querySelectorAll('.nav-list .dropdown.active').forEach(dropdown => {
+                dropdown.classList.remove('active');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (event) => {
+            if (!navbar.contains(event.target) && !hamburger.contains(event.target)) {
+                if (navbar.classList.contains('active')) {
+                    navbar.classList.remove('active');
+                    hamburger.classList.remove('active');
+                    document.querySelectorAll('.nav-list .dropdown.active').forEach(dropdown => {
+                        dropdown.classList.remove('active');
+                    });
+                }
+            }
+        });
+
+        // Mobile dropdown toggle
+        document.querySelectorAll('.dropdown > .dropbtn').forEach(dropbtn => {
+            dropbtn.addEventListener('click', function(event) {
+                if (window.innerWidth <= 768) {
+                    event.preventDefault();
+                    const parentLi = this.closest('.dropdown');
+                    parentLi.parentNode.querySelectorAll('.dropdown.active').forEach(openDropdown => {
+                        if (openDropdown !== parentLi) {
+                            openDropdown.classList.remove('active');
+                        }
+                    });
+                    parentLi.classList.toggle('active');
+                }
+            });
+        });
+
+        // Header collapse on scroll
+        const header = document.querySelector('.header');
+        const scrollThreshold = 50;
+
+        window.addEventListener('scroll', () => {
+            header.classList.toggle('header-scrolled', window.scrollY > scrollThreshold);
+        });
+
+        // Initial scroll check
+        if (window.scrollY > scrollThreshold) {
+            header.classList.add('header-scrolled');
+        }</script>
 </body>
 </html>
